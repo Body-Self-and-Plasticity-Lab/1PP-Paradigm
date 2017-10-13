@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/FemaleTest.unity
+- path: Assets/Male only.unity
   isLoaded: 1
   isActive: 1
