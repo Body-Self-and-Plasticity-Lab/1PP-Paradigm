@@ -1,14 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 using UnityEngine.XR;	
 
-public class vr_control : MonoBehaviour {
+
+
+
+public class HeadsetControl : MonoBehaviour {
+
+
+
 
 	// Use this for initialization
 	void Start () {
-		//UnityEngine.XR.InputTracking.
+		
 		InputTracking.disablePositionalTracking = true;
+
+
 	}
 	
 	// Update is called once per frame
@@ -16,6 +25,7 @@ public class vr_control : MonoBehaviour {
 
 		if (Input.GetKeyDown("c"))
 			InputTracking.Recenter ();
-		
 	}
+
+
 }
