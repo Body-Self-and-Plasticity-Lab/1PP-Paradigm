@@ -8,6 +8,7 @@ public class ArduinoControl : MonoBehaviour {
 
 	private SerialPort stream;
 	public static string[] arduinoSplitValues;
+	private string arduinoRaw;
 
 
 	// Use this for initialization
@@ -22,8 +23,19 @@ public class ArduinoControl : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		arduinoSplitValues = ReadFromArduino(1).Split(new string[] { "," }, StringSplitOptions.None);
+		arduinoRaw = ReadFromArduino(1);
+
+
+		string[] charsToRemove = new string[] {"[", "]"};
+		foreach (var c in charsToRemove) {
+			arduinoRaw = arduinoRaw.Replace (c, string.Empty); //substitutes the values in charsToRemove["[" and "]"] by empty characters to clean string
+		}
+
+		//Debug.Log("Arduino now is translated into: " + arduinoRaw);
+
+		arduinoSplitValues = arduinoRaw.Split(new string[] { "," }, StringSplitOptions.None);
 	}
+
 
 	//Read from arduino
 	public string ReadFromArduino(int timeout = 0) {
