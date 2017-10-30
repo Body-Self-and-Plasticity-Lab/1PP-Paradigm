@@ -9,6 +9,8 @@ public class HeadsetControl : MonoBehaviour {
 
 	public GameObject modifiedByHeart;
 	public Renderer rendy;
+	public int visuoCardiacMode;
+
 	private float maxValue = 0;
 
 	// Use this for initialization
@@ -36,37 +38,37 @@ public class HeadsetControl : MonoBehaviour {
 		//Changes the size of a Game Object
 		//modifiedByHeart.transform.localScale = new Vector3(float.Parse(arduinoValues[3]), float.Parse(arduinoValues[3]), float.Parse(arduinoValues[3]));
 
-		/*
-		//FOR ECG
-		if (currentValue >= maxValue && currentValue < 5)
-			maxValue = currentValue;
 
-		//Changes the transparency of a Game Object
-		Color tempColor = rendy.material.color; // converting rendy's color to a temporary variable
-		tempColor.a = currentValue/maxValue; //modifying it's transparency value by the normalized amplitude
-		rendy.material.color = tempColor; //applying the updated color
-		*/
+		//ECG ONLY
+		if(visuoCardiacMode == 0){
+			
+			if (currentValue >= maxValue && currentValue < 5)
+				maxValue = currentValue;
 
-
-		/*
-		//FOR PEAK
-		//Changes the transparency of a Game Object
-		Color tempColor = rendy.material.color; // converting rendy's color to a temporary variable
-		tempColor.a = float.Parse(arduinoValues[1]); //modifying it's transparency value by the normalized amplitude
-		rendy.material.color = tempColor;
-		*/
+			Color tempColor = rendy.material.color; // converting rendy's color to a temporary variable
+			tempColor.a = currentValue/maxValue; //modifying it's transparency value by the normalized amplitude
+			rendy.material.color = tempColor; //applying the updated color
+		}
+			
+	
+		//FOR PEAK ONLY
+		if (visuoCardiacMode == 1) {
+			Color tempColor = rendy.material.color; // converting rendy's color to a temporary variable
+			tempColor.a = float.Parse (arduinoValues [1]); //modifying it's transparency value by the normalized amplitude
+			rendy.material.color = tempColor;
+		}
 
 		// WEIGTHED PEAK + ECG = more pleasant effect
+		if(visuoCardiacMode == 2){
+			if (currentValue >= maxValue && currentValue < 5)
+				maxValue = currentValue;
 
-		if (currentValue >= maxValue && currentValue < 5)
-			maxValue = currentValue;
+			Color tempColor = rendy.material.color; // converting rendy's color to a temporary variable
+			tempColor.a = (currentValue/maxValue)*(1f+float.Parse(arduinoValues[1])/2); //modifying it's transparency value by the normalized amplitude
+			rendy.material.color = tempColor; //applying the updated color
+			}
 
-		//Changes the transparency of a Game Object
-		Color tempColor = rendy.material.color; // converting rendy's color to a temporary variable
-		tempColor.a = (currentValue/maxValue)*(1f+float.Parse(arduinoValues[1])/2); //modifying it's transparency value by the normalized amplitude
-		rendy.material.color = tempColor; //applying the updated color
-
-	}
+		}
 		
 
 }
