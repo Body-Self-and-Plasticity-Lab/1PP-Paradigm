@@ -7,12 +7,13 @@ using System;
 public class ArduinoControl : MonoBehaviour {
 
 	private SerialPort stream;
+	public static string[] arduinoSplitValues;
 
 
 	// Use this for initialization
 	void Start () {
 		
-		stream = new SerialPort ("/dev/tty.usbmodem14141", 115200); 
+		stream = new SerialPort ("/dev/tty.usbmodem1421", 115200); //should be able to set up from GUI
 		stream.ReadTimeout = 50;
 		stream.Open();
 	}
@@ -21,8 +22,7 @@ public class ArduinoControl : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		Debug.Log ("El valor es:" + ReadFromArduino(1).ToString()); 
-
+		arduinoSplitValues = ReadFromArduino(1).Split(new string[] { "," }, StringSplitOptions.None);
 	}
 
 	//Read from arduino
