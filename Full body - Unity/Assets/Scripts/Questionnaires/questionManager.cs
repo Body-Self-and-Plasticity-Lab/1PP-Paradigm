@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.XR;	
 
 
 public class questionManager : MonoBehaviour {
@@ -23,6 +24,8 @@ public class questionManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+		InputTracking.disablePositionalTracking = true;
 
 		myToggleGroup = FindObjectOfType<ToggleGroup>();
 		questionList = csvReader.questionnaireInput;

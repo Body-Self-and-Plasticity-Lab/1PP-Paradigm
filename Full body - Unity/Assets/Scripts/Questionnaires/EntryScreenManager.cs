@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; 
 using UnityEngine.SceneManagement;
+using UnityEngine.XR;	
 
 public class EntryScreenManager : MonoBehaviour {
 
@@ -19,6 +20,8 @@ public class EntryScreenManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+		InputTracking.disablePositionalTracking = true;
 		nextButton.interactable = false;
 	}
 	
