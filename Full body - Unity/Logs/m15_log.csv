@@ -1,0 +1,7 @@
+subject ID,age,gender,handedness,condition,question ID,value
+m15,23,Female,Left handed,,0,6
+m15,23,Female,Left handed,,1,5
+m15,23,Female,Left handed,,2,4
+m15,23,Female,Left handed,,3,3
+m15,23,Female,Left handed,,4,2
+m15,23,Female,Left handed,,5,5

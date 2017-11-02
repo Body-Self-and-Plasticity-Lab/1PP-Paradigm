@@ -45,9 +45,6 @@ public class EntryScreenManager : MonoBehaviour {
 		csvWrite.gender = genderField.text;
 		csvWrite.handedness = handednessField.text;
 
-		while (Time.fixedDeltaTime >= 3) {
-		}
-
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 	
 	}
