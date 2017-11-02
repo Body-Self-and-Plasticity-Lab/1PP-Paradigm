@@ -30,7 +30,13 @@ public class HeadsetControl : MonoBehaviour {
 		if (Input.GetKeyDown("c"))
 			InputTracking.Recenter ();
 
+		if (ArduinoControl.arduinoTracking)
+			ArduinoHeartTracking ();
 
+		}
+
+	private void ArduinoHeartTracking (){
+		
 		//Heartrate stuff
 		string[] arduinoValues = ArduinoControl.arduinoSplitValues;
 		float currentValue = float.Parse(arduinoValues[0]);
@@ -41,7 +47,7 @@ public class HeadsetControl : MonoBehaviour {
 
 		//ECG ONLY
 		if(visuoCardiacMode == 0){
-			
+
 			if (currentValue >= maxValue && currentValue < 5)
 				maxValue = currentValue;
 
@@ -49,8 +55,8 @@ public class HeadsetControl : MonoBehaviour {
 			tempColor.a = currentValue/maxValue; //modifying it's transparency value by the normalized amplitude
 			rendy.material.color = tempColor; //applying the updated color
 		}
-			
-	
+
+
 		//FOR PEAK ONLY
 		if (visuoCardiacMode == 1) {
 			Color tempColor = rendy.material.color; // converting rendy's color to a temporary variable
@@ -66,9 +72,7 @@ public class HeadsetControl : MonoBehaviour {
 			Color tempColor = rendy.material.color; // converting rendy's color to a temporary variable
 			tempColor.a = (currentValue/maxValue)*(1f+float.Parse(arduinoValues[1])/2); //modifying it's transparency value by the normalized amplitude
 			rendy.material.color = tempColor; //applying the updated color
-			}
-
 		}
-		
+	}
 
 }

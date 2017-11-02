@@ -10,30 +10,39 @@ public class ArduinoControl : MonoBehaviour {
 	public static string[] arduinoSplitValues;
 	private string arduinoRaw;
 
+	public bool arduinoOn;
+	public static bool arduinoTracking;
 
 	// Use this for initialization
 	void Start () {
-		
-		stream = new SerialPort ("/dev/tty.usbmodem1421", 115200); //should be able to set up from GUI
-		stream.ReadTimeout = 50;
-		stream.Open();
+
+		arduinoTracking = arduinoOn;
+
+		if (arduinoOn) {
+			stream = new SerialPort ("/dev/tty.usbmodem1421", 115200); //should be able to set up from GUI
+			stream.ReadTimeout = 50;
+			stream.Open ();
+		}
 	}
 
 
 	// Update is called once per frame
 	void Update () {
 
-		arduinoRaw = ReadFromArduino(1);
+		if (arduinoOn) {
+			
+			arduinoRaw = ReadFromArduino (1);
 
 
-		string[] charsToRemove = new string[] {"[", "]"};
-		foreach (var c in charsToRemove) {
-			arduinoRaw = arduinoRaw.Replace (c, string.Empty); //substitutes the values in charsToRemove["[" and "]"] by empty characters to clean string
+			string[] charsToRemove = new string[] { "[", "]" };
+			foreach (var c in charsToRemove) {
+				arduinoRaw = arduinoRaw.Replace (c, string.Empty); //substitutes the values in charsToRemove["[" and "]"] by empty characters to clean string
+			}
+
+			//Debug.Log("Arduino now is translated into: " + arduinoRaw);
+
+			arduinoSplitValues = arduinoRaw.Split (new string[] { "," }, StringSplitOptions.None);
 		}
-
-		//Debug.Log("Arduino now is translated into: " + arduinoRaw);
-
-		arduinoSplitValues = arduinoRaw.Split(new string[] { "," }, StringSplitOptions.None);
 	}
 
 
