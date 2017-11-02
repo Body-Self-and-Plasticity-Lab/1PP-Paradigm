@@ -1,8 +1,9 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\vr_control.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/HeadsetControl.cs">
     <Files>
-      <File FileName="Assets\Scripts\vr_control.cs" Line="15" Column="18" />
+      <File FileName="Assets/Scripts/ArduinoControl.cs" Line="17" Column="12" />
+      <File FileName="Assets/Scripts/HeadsetControl.cs" Line="35" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
