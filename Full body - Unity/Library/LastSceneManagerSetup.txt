@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Male only.unity
+- path: Assets/Scenes/Likert.unity
   isLoaded: 1
   isActive: 1

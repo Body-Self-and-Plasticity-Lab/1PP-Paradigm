@@ -52,7 +52,12 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\ArduinoControl.cs" />
+     <Compile Include="Assets\Scripts\DurationManagerVR.cs" />
      <Compile Include="Assets\Scripts\HeadsetControl.cs" />
+     <Compile Include="Assets\Scripts\Questionnaires\csvReader.cs" />
+     <Compile Include="Assets\Scripts\Questionnaires\csvWrite.cs" />
+     <Compile Include="Assets\Scripts\Questionnaires\EntryScreenManager.cs" />
+     <Compile Include="Assets\Scripts\Questionnaires\questionManager.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
