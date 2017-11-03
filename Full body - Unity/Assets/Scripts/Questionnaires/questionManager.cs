@@ -15,7 +15,6 @@ public class questionManager : MonoBehaviour {
 	public Toggle answer0, answer1, answer2, answer3, answer4, answer5, answer6;
 	private ToggleGroup myToggleGroup;
 	public Button nextButton;
-	//private Toggle[] everyToggle;
 
 	List<Toggle> everyToggle = new List<Toggle>();
 
@@ -27,7 +26,7 @@ public class questionManager : MonoBehaviour {
 
 		InputTracking.disablePositionalTracking = true;
 
-		myToggleGroup = FindObjectOfType<ToggleGroup>();
+		//myToggleGroup = FindObjectOfType<ToggleGroup>();
 		questionList = csvReader.questionnaireInput;
 		//everyToggle = GameObject.FindObjectsOfType<Toggle>(); //optimal way for autonomy and adapts to bigger arrays of toggles, but didn't find a way to order the array
 
@@ -35,7 +34,7 @@ public class questionManager : MonoBehaviour {
 
 		questionUI.text = questionList[currentItem];
 
-		nextButton.interactable = false;
+		//nextButton.interactable = false;
 	}
 
 
@@ -43,9 +42,11 @@ public class questionManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-		ActiveToggle ();
+		//ActiveToggle ();
 	
 	}
+
+
 		
 	//While not very beautiful I did not find another way to order the array
 	private void FillList(){
@@ -62,14 +63,14 @@ public class questionManager : MonoBehaviour {
 
 
 
-	private void ActiveToggle() {
+	/*private void ActiveToggle() {
 
 		if (myToggleGroup.AnyTogglesOn ()) 
 			nextButton.interactable = true;
 		
 		else if (myToggleGroup.AnyTogglesOn () == false)
 			nextButton.interactable = false;
-	}
+	}*/
 
 
 

@@ -1,6 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Questionnaires\NextButtonVRInteraction.cs">
+    <Files>
+      <File FileName="Assets\Scripts\Questionnaires\questionManager.cs" Line="71" Column="25" />
+      <File FileName="Assets\Scripts\Questionnaires\MenuToggle.cs" Line="119" Column="6" />
+      <File FileName="Assets\Scripts\Questionnaires\NextButtonVRInteraction.cs" Line="40" Column="57" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
