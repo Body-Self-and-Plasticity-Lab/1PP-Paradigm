@@ -12,6 +12,7 @@ public class ArduinoControl : MonoBehaviour {
 
 	public bool arduinoOn;
 	public static bool arduinoTracking;
+	public string arduinoPort;
 
 	// Use this for initialization
 	void Start () {
@@ -19,7 +20,7 @@ public class ArduinoControl : MonoBehaviour {
 		arduinoTracking = arduinoOn;
 
 		if (arduinoOn) {
-			stream = new SerialPort ("/dev/tty.usbmodem1421", 115200); //should be able to set up from GUI
+			stream = new SerialPort (arduinoPort, 115200); //should be able to set up from GUI
 			stream.ReadTimeout = 50;
 			stream.Open ();
 		}
