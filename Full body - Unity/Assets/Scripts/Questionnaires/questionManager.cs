@@ -13,44 +13,27 @@ public class questionManager : MonoBehaviour {
 	public Text questionUI;
 
 	public Toggle answer0, answer1, answer2, answer3, answer4, answer5, answer6;
-	private ToggleGroup myToggleGroup;
+	public ToggleGroup myToggleGroup;
 	public Button nextButton;
 
 	List<Toggle> everyToggle = new List<Toggle>();
 
 	private int currentItem;
-	//private int lastAnswer;
 
 	// Use this for initialization
 	void Start () {
 
 		InputTracking.disablePositionalTracking = true;
-
-		//myToggleGroup = FindObjectOfType<ToggleGroup>();
 		questionList = csvReader.questionnaireInput;
-		//everyToggle = GameObject.FindObjectsOfType<Toggle>(); //optimal way for autonomy and adapts to bigger arrays of toggles, but didn't find a way to order the array
-
 		FillList();
-
 		questionUI.text = questionList[currentItem];
 
-		//nextButton.interactable = false;
 	}
-
-
-
-	// Update is called once per frame
-	void Update () {
-		
-		//ActiveToggle ();
-	
-	}
-
 
 		
 	//While not very beautiful I did not find another way to order the array
 	private void FillList(){
-		
+
 		everyToggle.Add(answer0);
 		everyToggle.Add(answer1);
 		everyToggle.Add(answer2);
@@ -60,29 +43,20 @@ public class questionManager : MonoBehaviour {
 		everyToggle.Add(answer6);
 
 	}
-
-
-
-	/*private void ActiveToggle() {
-
-		if (myToggleGroup.AnyTogglesOn ()) 
-			nextButton.interactable = true;
 		
-		else if (myToggleGroup.AnyTogglesOn () == false)
-			nextButton.interactable = false;
-	}*/
-
-
-
 	public void OnNextButton() {
 
 		for (int i = 0; i < everyToggle.Count; i++) {
-			if (everyToggle[i].isOn)
-				csvWrite.answerValue = i.ToString();
+			if (everyToggle [i].isOn) {
+				csvWrite.answerValue = i.ToString ();
+				nextButton.interactable = false;
+				myToggleGroup.SetAllTogglesOff ();
+			}
 				everyToggle[i].isOn = false;
 		}
 
 		csvWrite.questionID = currentItem.ToString ();
+
 
 		currentItem ++;
 

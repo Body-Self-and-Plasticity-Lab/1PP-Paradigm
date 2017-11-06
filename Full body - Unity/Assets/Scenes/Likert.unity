@@ -784,6 +784,7 @@ MonoBehaviour:
   answer4: {fileID: 1905171311}
   answer5: {fileID: 2092949791}
   answer6: {fileID: 2079028115}
+  myToggleGroup: {fileID: 996987705}
   nextButton: {fileID: 1028518738}
 --- !u!1 &727866256
 GameObject:
@@ -811,7 +812,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 727866256}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 20, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2030509335}
@@ -821,7 +822,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 20}
   m_SizeDelta: {x: 85, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &727866258
@@ -886,7 +887,7 @@ MonoBehaviour:
   m_QuestionToggle: {fileID: 727866258}
   m_ToggleGroup: {fileID: 996987705}
   nextButton: {fileID: 1028518738}
-  gazeTimeToTurnOn: 1
+  logQuestionAndProceed: {fileID: 542773459}
 --- !u!114 &727866260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1012,7 +1013,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 761486333}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -300, y: 0, z: 0}
+  m_LocalPosition: {x: -300, y: 20, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1151155445}
@@ -1022,7 +1023,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -300, y: 0}
+  m_AnchoredPosition: {x: -300, y: 20}
   m_SizeDelta: {x: 85, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &761486335
@@ -1110,7 +1111,7 @@ MonoBehaviour:
   m_QuestionToggle: {fileID: 761486335}
   m_ToggleGroup: {fileID: 996987705}
   nextButton: {fileID: 1028518738}
-  gazeTimeToTurnOn: 1
+  logQuestionAndProceed: {fileID: 542773459}
 --- !u!1 &941922626
 GameObject:
   m_ObjectHideFlags: 0
@@ -1333,7 +1334,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 0
-      - m_Target: {fileID: 761486338}
+      - m_Target: {fileID: 1905171312}
         m_MethodName: OnNextButton
         m_Mode: 1
         m_Arguments:
@@ -1417,7 +1418,7 @@ MonoBehaviour:
   m_SelectionRadial: {fileID: 1242355831}
   m_InteractiveItem: {fileID: 1028518741}
   m_NextButton: {fileID: 1028518738}
-  gazeTimeToTurnOn: 4
+  gazeTimeToTurnOn: 1.5
 --- !u!1 &1108632423
 GameObject:
   m_ObjectHideFlags: 0
@@ -1444,7 +1445,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1108632423}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -200, y: 0, z: 0}
+  m_LocalPosition: {x: -200, y: 20, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1964991115}
@@ -1454,7 +1455,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -200, y: 0}
+  m_AnchoredPosition: {x: -200, y: 20}
   m_SizeDelta: {x: 85, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1108632425
@@ -1519,7 +1520,7 @@ MonoBehaviour:
   m_QuestionToggle: {fileID: 1108632425}
   m_ToggleGroup: {fileID: 996987705}
   nextButton: {fileID: 1028518738}
-  gazeTimeToTurnOn: 1
+  logQuestionAndProceed: {fileID: 542773459}
 --- !u!114 &1108632427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2459,7 +2460,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1905171309}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 100, y: 0, z: 0}
+  m_LocalPosition: {x: 100, y: 20, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1217001272}
@@ -2469,7 +2470,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 100, y: 0}
+  m_AnchoredPosition: {x: 100, y: 20}
   m_SizeDelta: {x: 85, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1905171311
@@ -2534,7 +2535,7 @@ MonoBehaviour:
   m_QuestionToggle: {fileID: 1905171311}
   m_ToggleGroup: {fileID: 996987705}
   nextButton: {fileID: 1028518738}
-  gazeTimeToTurnOn: 1
+  logQuestionAndProceed: {fileID: 542773459}
 --- !u!114 &1905171313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3006,7 +3007,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2068135512}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -100, y: 0, z: 0}
+  m_LocalPosition: {x: -100, y: 20, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 439056674}
@@ -3016,7 +3017,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -100, y: 0}
+  m_AnchoredPosition: {x: -100, y: 20}
   m_SizeDelta: {x: 85, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2068135514
@@ -3081,7 +3082,7 @@ MonoBehaviour:
   m_QuestionToggle: {fileID: 2068135514}
   m_ToggleGroup: {fileID: 996987705}
   nextButton: {fileID: 1028518738}
-  gazeTimeToTurnOn: 1
+  logQuestionAndProceed: {fileID: 542773459}
 --- !u!114 &2068135516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3131,7 +3132,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2079028113}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 300, y: 0, z: 0}
+  m_LocalPosition: {x: 300, y: 20, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2027930271}
@@ -3141,7 +3142,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 300, y: 0}
+  m_AnchoredPosition: {x: 300, y: 20}
   m_SizeDelta: {x: 85, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2079028115
@@ -3206,7 +3207,7 @@ MonoBehaviour:
   m_QuestionToggle: {fileID: 2079028115}
   m_ToggleGroup: {fileID: 996987705}
   nextButton: {fileID: 1028518738}
-  gazeTimeToTurnOn: 1
+  logQuestionAndProceed: {fileID: 542773459}
 --- !u!114 &2079028117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3324,7 +3325,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2092949789}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 200, y: 0, z: 0}
+  m_LocalPosition: {x: 200, y: 20, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2037340335}
@@ -3334,7 +3335,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 200, y: 0}
+  m_AnchoredPosition: {x: 200, y: 20}
   m_SizeDelta: {x: 85, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2092949791
@@ -3399,7 +3400,7 @@ MonoBehaviour:
   m_QuestionToggle: {fileID: 2092949791}
   m_ToggleGroup: {fileID: 996987705}
   nextButton: {fileID: 1028518738}
-  gazeTimeToTurnOn: 1
+  logQuestionAndProceed: {fileID: 542773459}
 --- !u!114 &2092949793
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -29,25 +29,24 @@ namespace VRStandardAssets.Menu
 
 
 		void Update (){
-
-			if (m_GazeOver) 
-				elapsedSinceGazed = Time.fixedTime - timeAtGaze;
-
+			
+			if (m_GazeOver && m_NextButton.IsInteractable())
+				elapsedSinceGazed = Time.realtimeSinceStartup - timeAtGaze;
+			
 			else if (!m_GazeOver)
 				elapsedSinceGazed = 0;
 
 			if (elapsedSinceGazed >= gazeTimeToTurnOn) {
-				//GetComponent<MenuToggle> ().m_QuestionToggle.isOn = false;
 				m_NextButton.onClick.Invoke ();
+				m_NextButton.interactable = false;
+				elapsedSinceGazed = 0;
 			}
-				
-		}
 
-
+		//	Debug.Log ("Elapsed time: " + elapsedSinceGazed);
+			}	
 
         private void OnEnable ()
         {
-			timeAtGaze = Time.fixedTime;
 
             m_InteractiveItem.OnOver += HandleOver;
             m_InteractiveItem.OnOut += HandleOut;
@@ -58,7 +57,7 @@ namespace VRStandardAssets.Menu
 
         private void OnDisable ()
         {
-
+			
             m_InteractiveItem.OnOver -= HandleOver;
             m_InteractiveItem.OnOut -= HandleOut;
             m_SelectionRadial.OnSelectionComplete -= HandleSelectionComplete;
@@ -69,9 +68,13 @@ namespace VRStandardAssets.Menu
         private void HandleOver()
         {
             // When the user looks at the rendering of the scene, show the radial.
-            m_SelectionRadial.Show();
 
-            m_GazeOver = true;
+
+			if (m_NextButton.interactable == true){// && elapsedSinceGazed >= gazeTimeToTurnOn) {
+				timeAtGaze = Time.realtimeSinceStartup;
+				m_SelectionRadial.Show();
+				m_GazeOver = true;
+			}
         }
 
 
@@ -81,15 +84,16 @@ namespace VRStandardAssets.Menu
             m_SelectionRadial.Hide();
 
             m_GazeOver = false;
+			elapsedSinceGazed = 0;
         }
 
 
         private void HandleSelectionComplete()
         {
             // If the user is looking at the rendering of the scene when the radial's selection finishes, activate the button.
-            if(m_GazeOver)
-               // StartCoroutine (ActivateButton());
-				m_NextButton.onClick.Invoke();
+			//if(m_GazeOver)  
+			// StartCoroutine (ActivateButton());
+
         }
 
 		/*

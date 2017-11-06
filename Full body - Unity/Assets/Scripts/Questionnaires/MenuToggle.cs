@@ -24,56 +24,38 @@ namespace VRStandardAssets.Menu
 
 		public Button nextButton;
 
-		public static bool turnToggle;
-
-		public float gazeTimeToTurnOn;
-
-		private float elapsedSinceGazed;
-		private float timeAtGaze;
+		public questionManager logQuestionAndProceed;
         private bool m_GazeOver;                                            // Whether the user is looking at the VRInteractiveItem currently.
-
 
 
 		void Start (){
 
 			nextButton.interactable = false;
+			m_QuestionToggle.isOn = false;
 		}
 			
 
 		void Update (){
 
-			if (m_GazeOver) 
-				elapsedSinceGazed = Time.fixedTime - timeAtGaze;
 
-			else if (!m_GazeOver)
-				elapsedSinceGazed = 0;
-
-			if (elapsedSinceGazed >= gazeTimeToTurnOn) {
-				m_QuestionToggle.isOn = true;
-				nextButton.interactable = true;
-			}
-
-			if (!m_ToggleGroup.AnyTogglesOn())
-				nextButton.interactable = false;
-
-			//nextButton.onClick.AddListener(NextQuestion);		
-				
+		//	if (!m_ToggleGroup.AnyTogglesOn())
+		//		nextButton.interactable = false;
+			
 		}
 
 		private void OnEnable ()
         {
-			timeAtGaze = Time.fixedTime;
 
             m_InteractiveItem.OnOver += HandleOver;
             m_InteractiveItem.OnOut += HandleOut;
             m_SelectionRadial.OnSelectionComplete += HandleSelectionComplete;
+
 
         }
 
 
         private void OnDisable ()
         {
-
             m_InteractiveItem.OnOver -= HandleOver;
             m_InteractiveItem.OnOut -= HandleOut;
             m_SelectionRadial.OnSelectionComplete -= HandleSelectionComplete;
@@ -87,6 +69,8 @@ namespace VRStandardAssets.Menu
             m_SelectionRadial.Show();
 
             m_GazeOver = true;
+			m_QuestionToggle.isOn = true;	 //turn toggle on and leave it on
+			nextButton.interactable = true;
         }
 
 
@@ -95,9 +79,8 @@ namespace VRStandardAssets.Menu
             // When the user looks away from the rendering of the scene, hide the radial.
             m_SelectionRadial.Hide();
 
-			//Debug.Log ("You are not looking at me!");
-
             m_GazeOver = false;
+
         }
 
 
@@ -109,13 +92,22 @@ namespace VRStandardAssets.Menu
         }
 
 		public void  OnNextButton(){
-			StartCoroutine ("WaitTest");
+			//StartCoroutine ("WaitToChange");
+			logQuestionAndProceed.OnNextButton ();
+			nextButton.interactable = false;
+			m_ToggleGroup.SetAllTogglesOff ();
 		}
 
-		private IEnumerator WaitTest(){
-			yield return new WaitForSeconds(2);
-			m_ToggleGroup.SetAllTogglesOff ();
-			//Debug.Log ("time passes");
+		private IEnumerator WaitToChange(){
+
+			yield return null;
+		
+			//yield return new WaitForSeconds(2);
+
+
+
+
+
 			//nextButton.onClick.Invoke ();
 		}
 
