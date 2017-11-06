@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using VRStandardAssets.Utils;
 using UnityEngine.UI;
-//using UnityEngine.EventSystems;
 
 namespace VRStandardAssets.Menu
 {
@@ -35,21 +34,11 @@ namespace VRStandardAssets.Menu
 		}
 			
 
-		void Update (){
-
-
-		//	if (!m_ToggleGroup.AnyTogglesOn())
-		//		nextButton.interactable = false;
-			
-		}
-
 		private void OnEnable ()
         {
-
             m_InteractiveItem.OnOver += HandleOver;
             m_InteractiveItem.OnOut += HandleOut;
             m_SelectionRadial.OnSelectionComplete += HandleSelectionComplete;
-
 
         }
 
@@ -78,7 +67,6 @@ namespace VRStandardAssets.Menu
         {
             // When the user looks away from the rendering of the scene, hide the radial.
             m_SelectionRadial.Hide();
-
             m_GazeOver = false;
 
         }
@@ -86,31 +74,9 @@ namespace VRStandardAssets.Menu
 
         private void HandleSelectionComplete()
         {
-            // If the user is looking at the rendering of the scene when the radial's selection finishes, activate the button.
-            if(m_GazeOver)
-                StartCoroutine (ActivateButton());
+			
         }
-
-		public void  OnNextButton(){
-			//StartCoroutine ("WaitToChange");
-			logQuestionAndProceed.OnNextButton ();
-			nextButton.interactable = false;
-			m_ToggleGroup.SetAllTogglesOff ();
-		}
-
-		private IEnumerator WaitToChange(){
-
-			yield return null;
-		
-			//yield return new WaitForSeconds(2);
-
-
-
-
-
-			//nextButton.onClick.Invoke ();
-		}
-
+			
 
         private IEnumerator ActivateButton()
         {

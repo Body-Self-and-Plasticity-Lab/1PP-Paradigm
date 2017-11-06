@@ -39,10 +39,10 @@ namespace VRStandardAssets.Menu
 			if (elapsedSinceGazed >= gazeTimeToTurnOn) {
 				m_NextButton.onClick.Invoke ();
 				m_NextButton.interactable = false;
+				StartCoroutine (ActivateButton());
 				elapsedSinceGazed = 0;
 			}
-
-		//	Debug.Log ("Elapsed time: " + elapsedSinceGazed);
+				
 			}	
 
         private void OnEnable ()
@@ -70,7 +70,7 @@ namespace VRStandardAssets.Menu
             // When the user looks at the rendering of the scene, show the radial.
 
 
-			if (m_NextButton.interactable == true){// && elapsedSinceGazed >= gazeTimeToTurnOn) {
+			if (m_NextButton.interactable == true) {
 				timeAtGaze = Time.realtimeSinceStartup;
 				m_SelectionRadial.Show();
 				m_GazeOver = true;
@@ -82,7 +82,7 @@ namespace VRStandardAssets.Menu
         {
             // When the user looks away from the rendering of the scene, hide the radial.
             m_SelectionRadial.Hide();
-
+	
             m_GazeOver = false;
 			elapsedSinceGazed = 0;
         }
@@ -92,11 +92,10 @@ namespace VRStandardAssets.Menu
         {
             // If the user is looking at the rendering of the scene when the radial's selection finishes, activate the button.
 			//if(m_GazeOver)  
-			// StartCoroutine (ActivateButton());
+			//
 
         }
 
-		/*
         private IEnumerator ActivateButton()
         {
             // If the camera is already fading, ignore.
@@ -104,13 +103,14 @@ namespace VRStandardAssets.Menu
                 yield break;
 
             // If anything is subscribed to the OnButtonSelected event, call it.
-            if (OnButtonSelected != null)
-                OnButtonSelected(this);
+         //   if (OnButtonSelected != null)
+          //      OnButtonSelected(this);
 
             // Wait for the camera to fade out.
             yield return StartCoroutine(m_CameraFade.BeginFadeOut(true));
+			yield return StartCoroutine (m_CameraFade.BeginFadeIn (true));
 
             // Load the level.
-        }*/
+        }
     }
 }

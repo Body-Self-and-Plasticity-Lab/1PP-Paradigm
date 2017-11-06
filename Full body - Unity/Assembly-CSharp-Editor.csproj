@@ -70,9 +70,6 @@
  <Reference Include="UnityEditor.UI">
  <HintPath>C:/Program Files/Unity_2017_2/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll</HintPath>
  </Reference>
- <Reference Include="UnityEngine.Networking">
- <HintPath>C:/Program Files/Unity_2017_2/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
- </Reference>
  <Reference Include="UnityEditor.Networking">
  <HintPath>C:/Program Files/Unity_2017_2/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
  </Reference>

@@ -1322,7 +1322,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 0
+        m_CallState: 2
       - m_Target: {fileID: 6617644}
         m_MethodName: onNextButtonPressed
         m_Mode: 1
@@ -1344,7 +1344,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 0
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1028518739
@@ -2425,13 +2425,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11451356, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11404258, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 2}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 11456534, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 2}
+      propertyPath: m_FadeDuration
+      value: 0.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11451356, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 2}
+    - {fileID: 11470632, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1905171309
@@ -3106,6 +3112,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 18, y: 18, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &2078372826 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 104168, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 2}
+  m_PrefabInternal: {fileID: 1902103672}
+--- !u!114 &2078372827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2078372826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 057db25763c616b41a5c895b1a238865, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2079028113
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using UnityEngine.XR;	
-
 
 public class questionManager : MonoBehaviour {
 
@@ -18,12 +16,13 @@ public class questionManager : MonoBehaviour {
 
 	List<Toggle> everyToggle = new List<Toggle>();
 
+
 	private int currentItem;
 
 	// Use this for initialization
 	void Start () {
 
-		InputTracking.disablePositionalTracking = true;
+
 		questionList = csvReader.questionnaireInput;
 		FillList();
 		questionUI.text = questionList[currentItem];
@@ -49,22 +48,25 @@ public class questionManager : MonoBehaviour {
 		for (int i = 0; i < everyToggle.Count; i++) {
 			if (everyToggle [i].isOn) {
 				csvWrite.answerValue = i.ToString ();
-				nextButton.interactable = false;
 				myToggleGroup.SetAllTogglesOff ();
 			}
-				everyToggle[i].isOn = false;
 		}
-
+				
 		csvWrite.questionID = currentItem.ToString ();
 
+		
+			currentItem ++;
 
-		currentItem ++;
-
-		if (currentItem < questionList.Count)
-			questionUI.text = questionList [currentItem];
+			if (currentItem < questionList.Count) 
+				questionUI.text = questionList [currentItem];
+			
 
 		else if (currentItem >= questionList.Count) {
-			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+				SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+			
 		}
 	}
+			
+
+
 }
