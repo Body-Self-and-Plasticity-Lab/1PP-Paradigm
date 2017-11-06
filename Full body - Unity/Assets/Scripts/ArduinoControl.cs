@@ -32,15 +32,16 @@ public class ArduinoControl : MonoBehaviour {
 
 		if (arduinoOn) {
 			
-			arduinoRaw = ReadFromArduino (1);
+			arduinoRaw = ReadFromArduino(5);
 
 
 			string[] charsToRemove = new string[] { "[", "]" };
+
 			foreach (var c in charsToRemove) {
 				arduinoRaw = arduinoRaw.Replace (c, string.Empty); //substitutes the values in charsToRemove["[" and "]"] by empty characters to clean string
 			}
 
-			//Debug.Log("Arduino now is translated into: " + arduinoRaw);
+			Debug.Log("Raw values after cleaning: " + arduinoRaw);
 
 			arduinoSplitValues = arduinoRaw.Split (new string[] { "," }, StringSplitOptions.None);
 		}
