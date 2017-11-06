@@ -12,6 +12,7 @@ public class ArduinoControl : MonoBehaviour {
 
 	public bool arduinoOn;
 	public static bool arduinoTracking;
+	public string arduinoPort;
 
 	// Use this for initialization
 	void Start () {
@@ -19,7 +20,7 @@ public class ArduinoControl : MonoBehaviour {
 		arduinoTracking = arduinoOn;
 
 		if (arduinoOn) {
-			stream = new SerialPort ("/dev/tty.usbmodem1421", 115200); //should be able to set up from GUI
+			stream = new SerialPort (arduinoPort, 115200); //should be able to set up from GUI
 			stream.ReadTimeout = 50;
 			stream.Open ();
 		}
@@ -31,15 +32,16 @@ public class ArduinoControl : MonoBehaviour {
 
 		if (arduinoOn) {
 			
-			arduinoRaw = ReadFromArduino (1);
+			arduinoRaw = ReadFromArduino(5);
 
 
 			string[] charsToRemove = new string[] { "[", "]" };
+
 			foreach (var c in charsToRemove) {
 				arduinoRaw = arduinoRaw.Replace (c, string.Empty); //substitutes the values in charsToRemove["[" and "]"] by empty characters to clean string
 			}
 
-			//Debug.Log("Arduino now is translated into: " + arduinoRaw);
+			Debug.Log("Raw values after cleaning: " + arduinoRaw);
 
 			arduinoSplitValues = arduinoRaw.Split (new string[] { "," }, StringSplitOptions.None);
 		}

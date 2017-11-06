@@ -14,7 +14,7 @@ public class HeadsetControl : MonoBehaviour {
 	private float maxValue = 0;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		
 		InputTracking.disablePositionalTracking = true;
 
@@ -44,12 +44,11 @@ public class HeadsetControl : MonoBehaviour {
 		//Changes the size of a Game Object
 		//modifiedByHeart.transform.localScale = new Vector3(float.Parse(arduinoValues[3]), float.Parse(arduinoValues[3]), float.Parse(arduinoValues[3]));
 
-
+		if (currentValue >= maxValue && currentValue < 5f)
+			maxValue = currentValue;
+		
 		//ECG ONLY
 		if(visuoCardiacMode == 0){
-
-			if (currentValue >= maxValue && currentValue < 5)
-				maxValue = currentValue;
 
 			Color tempColor = rendy.material.color; // converting rendy's color to a temporary variable
 			tempColor.a = currentValue/maxValue; //modifying it's transparency value by the normalized amplitude
@@ -60,17 +59,18 @@ public class HeadsetControl : MonoBehaviour {
 		//FOR PEAK ONLY
 		if (visuoCardiacMode == 1) {
 			Color tempColor = rendy.material.color; // converting rendy's color to a temporary variable
-			tempColor.a = float.Parse (arduinoValues [1]); //modifying it's transparency value by the normalized amplitude
+			tempColor.a = float.Parse(arduinoValues[1]); //modifying it's transparency value by the normalized amplitude
+			//Debug.Log(float.Parse(arduinoValues [1])/maxValue);
+			//Debug.Log ("the raw value is " + arduinoValues [1]);
 			rendy.material.color = tempColor;
+
 		}
 
 		// WEIGTHED PEAK + ECG = more pleasant effect
 		if(visuoCardiacMode == 2){
-			if (currentValue >= maxValue && currentValue < 5)
-				maxValue = currentValue;
 
 			Color tempColor = rendy.material.color; // converting rendy's color to a temporary variable
-			tempColor.a = (currentValue/maxValue)*(1f+float.Parse(arduinoValues[1])/2); //modifying it's transparency value by the normalized amplitude
+			tempColor.a = ((currentValue/maxValue)*(1+float.Parse(arduinoValues[1]))); //modifying it's transparency value by the normalized amplitude
 			rendy.material.color = tempColor; //applying the updated color
 		}
 	}
