@@ -1088,6 +1088,7 @@ GameObject:
   - component: {fileID: 468498952}
   - component: {fileID: 468498951}
   - component: {fileID: 468498955}
+  - component: {fileID: 468498956}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1159,7 +1160,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 468498950}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 426.5, y: 491, z: 0}
+  m_LocalPosition: {x: 424, y: 372.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2098080036}
@@ -1193,6 +1194,18 @@ MonoBehaviour:
   genderField: {fileID: 1534862950}
   handednessField: {fileID: 1182162584}
   nextButton: {fileID: 965761960}
+  csvWriter: {fileID: 468498956}
+--- !u!114 &468498956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 468498950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad81e5a53447140e494744d61af83c14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &640001992
 GameObject:
   m_ObjectHideFlags: 0
@@ -1609,29 +1622,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 965761961}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 468498955}
-        m_MethodName: OnNextButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2020900947}
-        m_MethodName: onParticipantDataEntered
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &965761961
@@ -3183,7 +3174,6 @@ GameObject:
   - component: {fileID: 2020900946}
   - component: {fileID: 2020900945}
   - component: {fileID: 2020900944}
-  - component: {fileID: 2020900947}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -3236,17 +3226,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2020900947
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2020900943}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad81e5a53447140e494744d61af83c14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2036669413
 GameObject:
   m_ObjectHideFlags: 0

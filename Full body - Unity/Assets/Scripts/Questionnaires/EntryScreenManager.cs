@@ -20,18 +20,22 @@ public class EntryScreenManager : MonoBehaviour {
 
 	public static bool isFemale;
 
+	public csvWrite csvWriter;
+
 	// Use this for initialization
 	void Start () {
-
 		InputTracking.disablePositionalTracking = true;
 		nextButton.interactable = false;
+		nextButton.onClick.AddListener (OnNextButton);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
-		if (participantName != null && age != null)
+		if (participantName != null && age != null) {
 			nextButton.interactable = true;
+
+		}
 	}
 
 	public void userName() {
@@ -44,16 +48,20 @@ public class EntryScreenManager : MonoBehaviour {
 
 	public void OnNextButton () {
 
+		Debug.Log ("Todo parecia ir muy bien");
 		if (genderField.text == "Female")
 			isFemale = true;
 		else if (genderField.text != "Female")
 			isFemale = false;
+
 		
 		csvWrite.subjectID = participantName;
 		csvWrite.age = age;
 
 		csvWrite.gender = genderField.text;
 		csvWrite.handedness = handednessField.text;
+
+		csvWriter.GetComponent<csvWrite>().onParticipantDataEntered();
 
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 	

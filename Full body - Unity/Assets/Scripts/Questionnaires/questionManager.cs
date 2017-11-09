@@ -14,6 +14,8 @@ public class questionManager : MonoBehaviour {
 	public ToggleGroup myToggleGroup;
 	public Button nextButton;
 
+	public csvWrite csvWriter;
+
 	List<Toggle> everyToggle = new List<Toggle>();
 
 
@@ -52,9 +54,9 @@ public class questionManager : MonoBehaviour {
 			}
 		}
 				
-		csvWrite.questionID = currentItem.ToString ();
+			csvWrite.questionID = currentItem.ToString ();
+			csvWriter.onNextButtonPressed ();
 
-		
 			currentItem ++;
 
 			if (currentItem < questionList.Count) 
