@@ -18,6 +18,8 @@ public class EntryScreenManager : MonoBehaviour {
 	private string participantName;
 	private string age;
 
+	public static bool isFemale;
+
 	// Use this for initialization
 	void Start () {
 
@@ -41,6 +43,11 @@ public class EntryScreenManager : MonoBehaviour {
 	}
 
 	public void OnNextButton () {
+
+		if (genderField.text == "Female")
+			isFemale = true;
+		else if (genderField.text != "Female")
+			isFemale = false;
 		
 		csvWrite.subjectID = participantName;
 		csvWrite.age = age;
