@@ -11,7 +11,10 @@ public class HeadsetControl : MonoBehaviour {
 	public Renderer rendy;
 	public int visuoCardiacMode;
 
-	private float maxValue = 0;
+	private float maxValue;
+
+	private float lastBeat = 0;
+	//private float currentBPM;
 
 	// Use this for initialization
 	void Start () {
@@ -19,8 +22,6 @@ public class HeadsetControl : MonoBehaviour {
 		InputTracking.disablePositionalTracking = true;
 
 		}
-
-
 
 
 	// Update is called once per frame
@@ -32,7 +33,6 @@ public class HeadsetControl : MonoBehaviour {
 
 		if (ArduinoControl.arduinoTracking)
 			ArduinoHeartTracking ();
-
 		}
 
 	private void ArduinoHeartTracking (){
@@ -45,11 +45,19 @@ public class HeadsetControl : MonoBehaviour {
 		//modifiedByHeart.transform.localScale = new Vector3(float.Parse(arduinoValues[3]), float.Parse(arduinoValues[3]), float.Parse(arduinoValues[3]));
 
 
+		if (arduinoValues[1] == "1" && ((Time.time - lastBeat) > 0.1)) { //logs current BPM
+			
+			float currentBPM = 60 / (Time.time - lastBeat);
+				Debug.Log ("The current BPM value is " + currentBPM);
+				lastBeat = Time.time;
+		}
+			
+
+		if (currentValue >= maxValue && currentValue < 5)
+			maxValue = currentValue;
+
 		//ECG ONLY
 		if(visuoCardiacMode == 0){
-
-			if (currentValue >= maxValue && currentValue < 5)
-				maxValue = currentValue;
 
 			Color tempColor = rendy.material.color; // converting rendy's color to a temporary variable
 			tempColor.a = currentValue/maxValue; //modifying it's transparency value by the normalized amplitude
@@ -59,15 +67,15 @@ public class HeadsetControl : MonoBehaviour {
 
 		//FOR PEAK ONLY
 		if (visuoCardiacMode == 1) {
+			
 			Color tempColor = rendy.material.color; // converting rendy's color to a temporary variable
 			tempColor.a = float.Parse (arduinoValues [1]); //modifying it's transparency value by the normalized amplitude
 			rendy.material.color = tempColor;
+
 		}
 
 		// WEIGTHED PEAK + ECG = more pleasant effect
 		if(visuoCardiacMode == 2){
-			if (currentValue >= maxValue && currentValue < 5)
-				maxValue = currentValue;
 
 			Color tempColor = rendy.material.color; // converting rendy's color to a temporary variable
 			tempColor.a = (currentValue/maxValue)*(1f+float.Parse(arduinoValues[1])/2); //modifying it's transparency value by the normalized amplitude

@@ -204,7 +204,7 @@ SkinnedMeshRenderer:
 GameObject:
   m_PrefabParentObject: {fileID: 100042, guid: e1f858eee3c574f539c6de1711f927a6, type: 3}
   m_PrefabInternal: {fileID: 1935224951}
---- !u!114 &205397840
+--- !u!114 &205397838
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -218,18 +218,6 @@ MonoBehaviour:
   modifiedByHeart: {fileID: 205397837}
   rendy: {fileID: 204686026}
   visuoCardiacMode: 2
---- !u!114 &205397841
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 205397837}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1e47043778514e028e6a33db137e1a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  arduinoOn: 0
 --- !u!1 &508314451
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,6 +227,7 @@ GameObject:
   m_Component:
   - component: {fileID: 508314453}
   - component: {fileID: 508314452}
+  - component: {fileID: 508314454}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -259,7 +248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   female: {fileID: 800392868}
   male: {fileID: 205397837}
-  conditionDuration: 10
+  conditionDuration: 40
 --- !u!4 &508314453
 Transform:
   m_ObjectHideFlags: 0
@@ -273,10 +262,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &508314454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 508314451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1e47043778514e028e6a33db137e1a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arduinoOn: 1
+  port: COM5
+  baudrate: 115200
 --- !u!1 &800392868 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100014, guid: 326436e14cc234b8bbd3b8e56c2b6dc3, type: 3}
   m_PrefabInternal: {fileID: 1213131485}
+--- !u!114 &800392869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 800392868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55bbfae48c60cdd4a86a333326af971d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  modifiedByHeart: {fileID: 800392868}
+  rendy: {fileID: 1213131488}
+  visuoCardiacMode: 2
 --- !u!1 &870912493
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,6 +456,11 @@ Transform:
 --- !u!1 &1213131487 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100022, guid: 326436e14cc234b8bbd3b8e56c2b6dc3, type: 3}
+  m_PrefabInternal: {fileID: 1213131485}
+--- !u!137 &1213131488 stripped
+SkinnedMeshRenderer:
+  m_PrefabParentObject: {fileID: 13700002, guid: 326436e14cc234b8bbd3b8e56c2b6dc3,
+    type: 3}
   m_PrefabInternal: {fileID: 1213131485}
 --- !u!82 &1213131489
 AudioSource:
