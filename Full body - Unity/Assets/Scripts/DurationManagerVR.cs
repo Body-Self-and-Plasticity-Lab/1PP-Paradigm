@@ -8,22 +8,26 @@ public class DurationManagerVR : MonoBehaviour {
 	public GameObject female;
 	public GameObject male;
 
-	public float conditionDuration;
+	private float duration;
+	//public float conditionDuration;
 	// Use this for initialization
+
 	void Start () {
-		
+
+		duration = EntryScreenManager.conditionDuration;
+		//duration = 30; //uncomment this for testing
+		//EntryScreenManager.isFemale = true; //uncomment this for testing
+
 		if (EntryScreenManager.isFemale) 
 		{
 			female.SetActive (true);
 			male.SetActive (false);
-			Debug.Log ("Girls!");
 		}
 
 		else if (!EntryScreenManager.isFemale) 
 		{
 			female.SetActive (false);
 			male.SetActive (true);
-			Debug.Log ("Guys!");
 
 		}
 	}
@@ -31,7 +35,7 @@ public class DurationManagerVR : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-		if (Time.timeSinceLevelLoad >= conditionDuration) 
+		if (Time.timeSinceLevelLoad >= duration) 
 			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 		
 	}

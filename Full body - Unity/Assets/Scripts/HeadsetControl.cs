@@ -14,7 +14,6 @@ public class HeadsetControl : MonoBehaviour {
 	private float maxValue;
 
 	private float lastBeat = 0;
-	//private float currentBPM;
 
 	// Use this for initialization
 	void Start () {
@@ -31,7 +30,7 @@ public class HeadsetControl : MonoBehaviour {
 		if (Input.GetKeyDown("c"))
 			InputTracking.Recenter ();
 
-		if (ArduinoControl.arduinoTracking)
+		if (EntryScreenManager.arduinoTrackingIsOn)
 			ArduinoHeartTracking ();
 		}
 

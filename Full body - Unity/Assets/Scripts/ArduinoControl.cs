@@ -10,19 +10,16 @@ public class ArduinoControl : MonoBehaviour {
 	public static string[] arduinoSplitValues;
 	private string arduinoRaw;
 
-	public bool arduinoOn;
-	public static bool arduinoTracking;
-
 	public string port;
 	public int baudrate;
 
 	// Use this for initialization
 	void Start () {
 
-		arduinoTracking = arduinoOn;
+		string[] ports = SerialPort.GetPortNames();
 
-		if (arduinoOn) {
-			stream = new SerialPort (port, baudrate); //should be able to set up from GUI
+		if (EntryScreenManager.arduinoTrackingIsOn) {
+			stream = new SerialPort (ports[EntryScreenManager.portIndex], baudrate); //should be able to set up from GUI
 			stream.ReadTimeout = 50;
 			stream.Open ();
 		}
@@ -32,7 +29,7 @@ public class ArduinoControl : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (arduinoOn) {
+		if (EntryScreenManager.arduinoTrackingIsOn) {
 			
 			arduinoRaw = ReadFromArduino (5);
 
@@ -41,8 +38,6 @@ public class ArduinoControl : MonoBehaviour {
 			foreach (var c in charsToRemove) {
 				arduinoRaw = arduinoRaw.Replace (c, string.Empty); //substitutes the values in charsToRemove["[" and "]"] by empty characters to clean string
 			}
-
-			//Debug.Log("Arduino now is translated into: " + arduinoRaw);
 
 			arduinoSplitValues = arduinoRaw.Split (new string[] { "," }, StringSplitOptions.None);
 		}

@@ -2,13 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
+using UnityEngine.SceneManagement;
 
 public class CenterView : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		
 		InputTracking.disablePositionalTracking = true;
-		UnityEngine.XR.InputTracking.Recenter();
+
+		//Debug.Log (SceneManager.GetActiveScene ().buildIndex);
+
+		//if(SceneManager.GetActiveScene().buildIndex == 0)
+		//	UnityEngine.XR.InputTracking.Recenter();
 	}
 	
 	// Update is called once per frame

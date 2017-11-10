@@ -8,49 +8,66 @@ using System.IO.Ports;
 
 public class EntryScreenManager : MonoBehaviour {
 
-	public InputField nameField;
-	public InputField ageField;
+	public InputField nameField, ageField, enteredDuration;
 
-	public Text genderField;
-	public Text handednessField;
+	public Text genderField, handednessField;
 
 	public Dropdown serialDropdown;
-	public Text selectedSerial;
 
 	public Button nextButton;
+	public Toggle arduinoOn;
 
-	private string participantName;
-	private string age;
+	private string participantName, age;
 
-	public static bool isFemale;
-	public static string port;
+	public static bool isFemale, arduinoTrackingIsOn;
+	public static int conditionDuration, portIndex;
 
 	public csvWrite csvWriter;
 
 	// Use this for initialization
 	void Start () {
+
 		InputTracking.disablePositionalTracking = true;
 		nextButton.interactable = false;
 		nextButton.onClick.AddListener (OnNextButton);
 
-		SetSerialDropDownOptions ();
+		setSerialDropDownOptions ();
+		serialDropdown.interactable = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
-		if (participantName != null && age != null) {
-			nextButton.interactable = true;
 
-		}
+		if (participantName != null && age != null)
+			nextButton.interactable = true;
 	}
 
 	public void userName() {
 		participantName = nameField.text;
+
 	}
 
 	public void userAge() {
 		age = ageField.text;
+	}
+		
+
+	public void OnArduinoTracking() {
+
+		serialDropdown.interactable = arduinoOn.isOn;
+		arduinoTrackingIsOn = arduinoOn.isOn;
+
+	}
+
+
+	public void setSerialDropDownOptions () {
+
+		string[] ports = SerialPort.GetPortNames();
+		serialDropdown.options.Clear ();
+
+		foreach (string c in ports) {
+			serialDropdown.options.Add (new Dropdown.OptionData () { text = c }); 
+		}
 	}
 
 	public void OnNextButton () {
@@ -58,11 +75,12 @@ public class EntryScreenManager : MonoBehaviour {
 
 		if (genderField.text == "Female")
 			isFemale = true;
+		
 		else if (genderField.text != "Female")
 			isFemale = false;
 
-		port = selectedSerial.text;
-		Debug.Log (port);
+		portIndex = serialDropdown.value; //(serialDropdown.value);
+		conditionDuration = int.Parse(enteredDuration.text);
 
 		csvWrite.subjectID = participantName;
 		csvWrite.age = age;
@@ -74,15 +92,6 @@ public class EntryScreenManager : MonoBehaviour {
 
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 	
-	}
-
-	public void SetSerialDropDownOptions () {
-		
-		string[] ports = SerialPort.GetPortNames();
-		serialDropdown.options.Clear ();
-		foreach (string c in ports) {
-			serialDropdown.options.Add (new Dropdown.OptionData () { text = c });
-		}
 	}
 
 }
