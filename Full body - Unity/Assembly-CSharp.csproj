@@ -121,16 +121,11 @@
      <Compile Include="Assets\VRStandardAssets\Scripts\VRInteractiveItem.cs" />
      <Compile Include="Assets\VRStandardAssets\Scripts\VRTrackingReset.cs" />
      <None Include="Assets\VRSampleScenes\Shaders\UnlitTransparentParam.shader" />
-     <None Include="Assets\Plugins\Android\Assets\OSIG_Readme.txt" />
      <None Include="Assets\VRSampleScenes\Shaders\UIOverlay.shader" />
      <None Include="Assets\VRSampleScenes\Shaders\PriorityParticleAlpha.shader" />
-     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\VRSampleScenes\Shaders\SlidingUV.shader" />
      <None Include="Assets\VRSampleScenes\Shaders\SeparableAlpha.shader" />
      <None Include="Assets\VRSampleScenes\Fonts\LICENSE.txt" />
-     <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
-     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
-     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -164,10 +159,6 @@
  <Reference Include="UnityEngine.Purchasing">
  <HintPath>C:/Users/BSP-Lab/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/UnityEngine.Purchasing.dll</HintPath>
  </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{A6FC3B0D-8ACF-7081-845D-F0EB454DA07D}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
