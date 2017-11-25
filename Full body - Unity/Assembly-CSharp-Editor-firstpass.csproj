@@ -51,18 +51,43 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Standard Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
+     <Compile Include="Assets\Standard Assets\Editor\KinectCopyPluginDataHelper.cs" />
+     <Compile Include="Assets\Standard Assets\Editor\KinectFacePostBuildCopyPluginData.cs" />
+     <None Include="Assets\Resources\BlurShader.shader" />
+     <None Include="Assets\Resources\MedianShader.shader" />
+     <None Include="Assets\Resources\DepthShader.shader" />
+     <None Include="Assets\Resources\SpeechGrammar.grxml.txt" />
+     <None Include="Assets\Resources\BlurShader3.shader" />
+     <None Include="Assets\Packages\KinectDemos\ProjectorDemo\Scripts\RoomAliveToolkit\Attribution.txt" />
+     <None Include="Assets\Packages\OutlineEffect\Resources\OutlineShader.shader" />
+     <None Include="Assets\Resources\Color2DepthShader.shader" />
+     <None Include="Assets\Packages\OutlineEffect\Resources\OutlineBufferShader.shader" />
      <None Include="Assets\VRSampleScenes\Shaders\UnlitTransparentParam.shader" />
-     <None Include="Assets\Plugins\Android\Assets\OSIG_Readme.txt" />
+     <None Include="Assets\Resources\ForegroundBlendShader.shader" />
+     <None Include="Assets\Resources\BlurShader2.shader" />
      <None Include="Assets\VRSampleScenes\Shaders\UIOverlay.shader" />
+     <None Include="Assets\Resources\Color2DepthShaderInv.shader" />
+     <None Include="Assets\Packages\KinectDemos\RecorderDemo\Resources\PlayerGrammar.grxml.txt" />
      <None Include="Assets\VRSampleScenes\Shaders\PriorityParticleAlpha.shader" />
-     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+     <None Include="Assets\Plugins\UWP\Attribution.txt" />
+     <None Include="Assets\Resources\CoordMapper.compute" />
+     <None Include="Assets\Resources\Depth2ColorShader.shader" />
      <None Include="Assets\VRSampleScenes\Shaders\SlidingUV.shader" />
+     <None Include="Assets\Resources\Erode.shader" />
      <None Include="Assets\VRSampleScenes\Shaders\SeparableAlpha.shader" />
+     <None Include="Assets\Resources\BodyShader.shader" />
      <None Include="Assets\VRSampleScenes\Fonts\LICENSE.txt" />
-     <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
-     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
-     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
+     <None Include="Assets\Packages\KinectDemos\ProjectorDemo\Resources\calibration-empty.xml" />
+     <None Include="Assets\Resources\Dilate.shader" />
+     <None Include="Assets\Packages\KinectDemos\ProjectorDemo\Resources\calibration.xml" />
+     <None Include="Assets\Resources\BlurShader5.shader" />
+     <None Include="Assets\Plugins\Android\Assets\OSIG_Readme.txt" />
+     <None Include="Assets\Packages\_Readme\License.txt" />
+     <None Include="Assets\Packages\KinectDemos\FittingRoomDemo\Resources\Shaders\UserBlendShader.shader" />
+     <None Include="Assets\Packages\KinectDemos\VisualizerDemo\Shaders\HoloTriangles.shader" />
+     <None Include="Assets\Resources\Color2BodyShader.shader" />
+     <None Include="Assets\Resources\BlurShader4.shader" />
+     <None Include="Assets\Packages\_Readme\致盗版使用者-ToPiracyUsers.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -143,6 +168,12 @@
  </Reference>
  <Reference Include="UnityEditor.Purchasing">
  <HintPath>C:/Users/BSP-Lab/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/Editor/UnityEditor.Purchasing.dll</HintPath>
+ </Reference>
+ <Reference Include="LZ4Sharp">
+ <HintPath>C:/Users/BSP-Lab/Documents/Experiments/1PP-Paradigm/Full body - Unity/Assets/Packages/KinectScripts/LZ4Sharp/LZ4Sharp.dll</HintPath>
+ </Reference>
+ <Reference Include="ICSharpCode.SharpZipLib">
+ <HintPath>C:/Users/BSP-Lab/Documents/Experiments/1PP-Paradigm/Full body - Unity/Assets/Packages/KinectScripts/SharpZipLib/ICSharpCode.SharpZipLib.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

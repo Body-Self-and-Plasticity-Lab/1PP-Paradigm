@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Intro screen.unity
+- path: Assets/Packages/OutlineEffect/Demo/Demo.unity
   isLoaded: 1
   isActive: 1

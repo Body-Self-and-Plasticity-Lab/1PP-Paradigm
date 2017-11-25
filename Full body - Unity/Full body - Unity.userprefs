@@ -1,6 +1,14 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Packages\OutlineEffect\OutlineEffect.cs">
+    <Files>
+      <File FileName="Assets\Scripts\VisuocardiacMapping.cs" Line="31" Column="4" />
+      <File FileName="Assets\Scripts\Questionnaires\EntryScreenManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MainSceneConfigurations.cs" Line="69" Column="30" />
+      <File FileName="Assets\Scripts\ArduinoControl.cs" Line="61" Column="29" />
+      <File FileName="Assets\Packages\OutlineEffect\OutlineEffect.cs" Line="343" Column="22" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

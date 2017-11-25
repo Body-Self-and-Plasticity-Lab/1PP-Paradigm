@@ -17,9 +17,11 @@ public class EntryScreenManager : MonoBehaviour {
 	public Button nextButton;
 	public Toggle arduinoOn;
 
+	public Toggle kinectOn;
+
 	private string participantName, age;
 
-	public static bool isFemale, arduinoTrackingIsOn;
+	public static bool isFemale, arduinoTrackingIsOn, kinectStatus;
 	public static int conditionDuration, portIndex;
 
 	public csvWrite csvWriter;
@@ -40,6 +42,7 @@ public class EntryScreenManager : MonoBehaviour {
 
 		if (participantName != null && age != null)
 			nextButton.interactable = true;
+
 	}
 
 	public void userName() {
@@ -57,6 +60,10 @@ public class EntryScreenManager : MonoBehaviour {
 		serialDropdown.interactable = arduinoOn.isOn;
 		arduinoTrackingIsOn = arduinoOn.isOn;
 
+	}
+
+	public void OnKinectTracking() {
+		kinectStatus = kinectOn.isOn;
 	}
 
 

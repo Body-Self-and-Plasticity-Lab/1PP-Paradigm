@@ -72,3 +72,5 @@ C:\Users\BSP-Lab\Documents\Experiments\1PP-Paradigm\Full body - Unity\Temp\bin\D
 C:\Users\BSP-Lab\Documents\Experiments\1PP-Paradigm\Full body - Unity\obj\Debug\Assembly-CSharp-firstpass.csprojResolveAssemblyReference.cache
 C:\Users\BSP-Lab\Documents\Experiments\1PP-Paradigm\Full body - Unity\obj\Debug\Assembly-CSharp-firstpass.dll
 C:\Users\BSP-Lab\Documents\Experiments\1PP-Paradigm\Full body - Unity\obj\Debug\Assembly-CSharp-firstpass.pdb
+C:\Users\BSP-Lab\Documents\Experiments\1PP-Paradigm\Full body - Unity\Temp\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\BSP-Lab\Documents\Experiments\1PP-Paradigm\Full body - Unity\Temp\bin\Debug\LZ4Sharp.dll
