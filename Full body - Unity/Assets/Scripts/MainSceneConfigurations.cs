@@ -40,7 +40,9 @@ public class MainSceneConfigurations : MonoBehaviour {
 			male.SetActive (true);
 		}
 			
-		if (EntryScreenManager.kinectStatus == true) {
+		if (EntryScreenManager.kinectStatus == true) 
+		{
+			setKinectFromCurrentScene = false;
 			InputTracking.disablePositionalTracking = false;
 			myKinectManager.enabled = true;
 		} 

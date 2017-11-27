@@ -8,6 +8,11 @@ public class OutlineCardio : MonoBehaviour {
 	private float lastBeat = 0;
 	private float maxValue;
 
+	private Color colorChanging;
+	private Color colorTransparent;
+
+	public bool embodiedManipulation;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -19,15 +24,29 @@ public class OutlineCardio : MonoBehaviour {
 		string[] arduinoValues = ArduinoControl.arduinoSplitValues;
 		float currentValue = float.Parse(arduinoValues[0]);
 
-		Color c = GetComponent<OutlineEffect>().lineColor0;
+		colorTransparent = GetComponent<OutlineEffect>().lineColor0;
+		colorChanging = GetComponent<OutlineEffect>().lineColor1;
 
 		if (currentValue >= maxValue && currentValue < 5)
 			maxValue = currentValue;
 
-		c.a = Mathf.Clamp01 (currentValue / maxValue);
+		colorChanging.a = Mathf.Clamp01 (currentValue / maxValue);
+		colorTransparent.a = 0f;
 
-		GetComponent<OutlineEffect>().lineColor0 = c;
-		GetComponent<OutlineEffect>().UpdateMaterialsPublicProperties();
+		if (embodiedManipulation) 
+		{
+
+			GetComponent<OutlineEffect> ().lineColor0 = colorChanging;
+			GetComponent<OutlineEffect> ().lineColor1 = colorTransparent;
+			GetComponent<OutlineEffect> ().UpdateMaterialsPublicProperties ();
+		} 
+
+		else if (!embodiedManipulation) 
+		{
+			GetComponent<OutlineEffect> ().lineColor0 = colorTransparent;
+			GetComponent<OutlineEffect> ().lineColor1 = colorChanging;
+			GetComponent<OutlineEffect> ().UpdateMaterialsPublicProperties ();
+		}
 
 		LogBPM (arduinoValues);
 

@@ -24,6 +24,7 @@ public class ArduinoControl : MonoBehaviour {
 			stream = new SerialPort (ports[EntryScreenManager.portIndex], baudrate); 
 			stream.ReadTimeout = 50;
 			stream.Open ();
+			setArduinoFromEditor = false;
 		} 
 
 		if (setArduinoFromEditor) 
