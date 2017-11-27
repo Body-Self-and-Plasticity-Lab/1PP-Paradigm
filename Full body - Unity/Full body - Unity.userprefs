@@ -4,11 +4,11 @@
     <Files>
       <File FileName="Assets\Scripts\Questionnaires\EntryScreenManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\MainSceneConfigurations.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ArduinoControl.cs" Line="1" Column="1" />
-      <File FileName="Assets\Packages\OutlineEffect\OutlineEffect.cs" Line="343" Column="22" />
-      <File FileName="Assets\Packages\OutlineEffect\Demo\OutlineAnimation.cs" Line="41" Column="10" />
-      <File FileName="Assets\Scripts\VisuocardiacMapping.cs" Line="37" Column="3" />
-      <File FileName="Assets\Scripts\OutlineCardio.cs" Line="29" Column="32" />
+      <File FileName="Assets\Scripts\ArduinoControl.cs" Line="70" Column="4" />
+      <File FileName="Assets\Packages\OutlineEffect\OutlineEffect.cs" Line="1" Column="1" />
+      <File FileName="Assets\Packages\OutlineEffect\Demo\OutlineAnimation.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\VisuocardiacMapping.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\OutlineCardio.cs" Line="54" Column="68" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

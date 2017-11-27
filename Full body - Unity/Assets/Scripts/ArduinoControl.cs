@@ -8,11 +8,13 @@ public class ArduinoControl : MonoBehaviour {
 
 	private SerialPort stream;
 	public static string[] arduinoSplitValues;
+	public static string[] delayedArduinoValues;
 	private string arduinoRaw;
 
 	public bool setArduinoFromEditor;
 	public string port;
 	public int baudrate;
+	public float delayTime;
 
 	// Use this for initialization
 	void Start () {
@@ -49,6 +51,7 @@ public class ArduinoControl : MonoBehaviour {
 			}
 
 			arduinoSplitValues = arduinoRaw.Split (new string[] { "," }, StringSplitOptions.None);
+			StartCoroutine (DelayValues (delayTime, arduinoSplitValues));
 		}
 	}
 
@@ -65,6 +68,11 @@ public class ArduinoControl : MonoBehaviour {
 		catch (TimeoutException) {
 			return null;
 		}
+	}
+
+	private IEnumerator DelayValues (float delay, string[] arduinoValues){
+		yield return new WaitForSeconds(delayTime);
+		delayedArduinoValues = arduinoValues;
 	}
 
 
