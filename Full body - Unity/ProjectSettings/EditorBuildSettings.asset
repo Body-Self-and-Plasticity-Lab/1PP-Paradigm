@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Intro screen.unity
     guid: 2301358e402394940bb50599c813bad2
   - enabled: 1
+    path: Assets/Scenes/Stimulation Kinect with outline.unity
+    guid: 6479823151665424b954bbce0159c1a4
+  - enabled: 0
     path: Assets/Scenes/Stimulation Kinect.unity
     guid: 38b97fb7d9674a44c886a40ef76dbc9d
   - enabled: 0

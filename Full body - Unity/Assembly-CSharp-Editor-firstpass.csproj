@@ -154,6 +154,12 @@
  <Reference Include="UnityEditor.OSXStandalone.Extensions">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
  </Reference>
+ <Reference Include="LZ4Sharp">
+ <HintPath>C:/Users/BSP-Lab/Documents/Experiments/1PP-Paradigm/Full body - Unity/Assets/Packages/KinectScripts/LZ4Sharp/LZ4Sharp.dll</HintPath>
+ </Reference>
+ <Reference Include="ICSharpCode.SharpZipLib">
+ <HintPath>C:/Users/BSP-Lab/Documents/Experiments/1PP-Paradigm/Full body - Unity/Assets/Packages/KinectScripts/SharpZipLib/ICSharpCode.SharpZipLib.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>C:/Users/BSP-Lab/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@1.0.7/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
@@ -168,12 +174,6 @@
  </Reference>
  <Reference Include="UnityEditor.Purchasing">
  <HintPath>C:/Users/BSP-Lab/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/Editor/UnityEditor.Purchasing.dll</HintPath>
- </Reference>
- <Reference Include="LZ4Sharp">
- <HintPath>C:/Users/BSP-Lab/Documents/Experiments/1PP-Paradigm/Full body - Unity/Assets/Packages/KinectScripts/LZ4Sharp/LZ4Sharp.dll</HintPath>
- </Reference>
- <Reference Include="ICSharpCode.SharpZipLib">
- <HintPath>C:/Users/BSP-Lab/Documents/Experiments/1PP-Paradigm/Full body - Unity/Assets/Packages/KinectScripts/SharpZipLib/ICSharpCode.SharpZipLib.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
