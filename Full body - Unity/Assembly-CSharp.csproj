@@ -187,6 +187,7 @@
      <Compile Include="Assets\Packages\OutlineEffect\Outline.cs" />
      <Compile Include="Assets\Packages\OutlineEffect\OutlineEffect.cs" />
      <Compile Include="Assets\Scripts\ArduinoControl.cs" />
+     <Compile Include="Assets\Scripts\AuidoLevelCardio.cs" />
      <Compile Include="Assets\Scripts\HeadsetControl.cs" />
      <Compile Include="Assets\Scripts\MainSceneConfigurations.cs" />
      <Compile Include="Assets\Scripts\OutlineCardio.cs" />
@@ -197,6 +198,7 @@
      <Compile Include="Assets\Scripts\Questionnaires\MenuToggle.cs" />
      <Compile Include="Assets\Scripts\Questionnaires\NextButtonVRInteraction.cs" />
      <Compile Include="Assets\Scripts\Questionnaires\questionManager.cs" />
+     <Compile Include="Assets\Scripts\ScaleWithHeart.cs" />
      <Compile Include="Assets\Scripts\VisuocardiacMapping.cs" />
      <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
      <Compile Include="Assets\VRSampleScenes\Scripts\Common\SessionData.cs" />

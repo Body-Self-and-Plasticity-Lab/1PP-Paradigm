@@ -43,7 +43,7 @@ public class VisuocardiacMapping : MonoBehaviour {
 		if (arduinoValues[1] == "1" && ((Time.time - lastBeat) > 0.1)) { //logs current BPM
 			
 			float currentBPM = 60 / (Time.time - lastBeat);
-				Debug.Log ("The current BPM value is " + currentBPM);
+				//Debug.Log ("The current BPM value is " + currentBPM);
 				lastBeat = Time.time;
 		}
 			
