@@ -1,14 +1,11 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\OutlineCardio.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ScrollBarOculus.cs">
     <Files>
-      <File FileName="Assets\Scripts\Questionnaires\EntryScreenManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\MainSceneConfigurations.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ArduinoControl.cs" Line="70" Column="4" />
-      <File FileName="Assets\Packages\OutlineEffect\OutlineEffect.cs" Line="1" Column="1" />
-      <File FileName="Assets\Packages\OutlineEffect\Demo\OutlineAnimation.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\VisuocardiacMapping.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\OutlineCardio.cs" Line="54" Column="68" />
+      <File FileName="Assets\Scripts\ScrollBarOculus.cs" Line="54" Column="38" />
+      <File FileName="Assets\Scripts\Questionnaires\NextButtonVRInteraction.cs" Line="39" Column="39" />
+      <File FileName="Assets\VRStandardAssets\Scripts\VRInteractiveItem.cs" Line="29" Column="28" />
+      <File FileName="Assets\Scripts\Questionnaires\questionManager.cs" Line="15" Column="26" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

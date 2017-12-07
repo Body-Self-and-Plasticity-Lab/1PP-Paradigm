@@ -76,3 +76,7 @@ C:\Users\BSP-Lab\Documents\Experiments\1PP-Paradigm\Full body - Unity\obj\Debug\
 C:\Users\BSP-Lab\Documents\Experiments\1PP-Paradigm\Full body - Unity\Temp\bin\Debug\ICSharpCode.SharpZipLib.dll
 C:\Users\BSP-Lab\Documents\Experiments\1PP-Paradigm\Full body - Unity\Temp\bin\Debug\LZ4Sharp.dll
 C:\Users\BSP-Lab\Documents\Experiments\1PP-Paradigm\Full body - Unity\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb
+C:\Users\BeAnotherLab\Documents\GitHub\1PP-Paradigm\Full body - Unity\Temp\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\BeAnotherLab\Documents\GitHub\1PP-Paradigm\Full body - Unity\Temp\bin\Debug\LZ4Sharp.dll
+C:\Users\BeAnotherLab\Documents\GitHub\1PP-Paradigm\Full body - Unity\Temp\bin\Debug\UnityEngine.Networking.dll
+C:\Users\BeAnotherLab\Documents\GitHub\1PP-Paradigm\Full body - Unity\Temp\bin\Debug\UnityEngine.Networking.xml

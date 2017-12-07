@@ -65,7 +65,6 @@ public class questionManager : MonoBehaviour {
 
 		else if (currentItem >= questionList.Count) {
 				SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-			
 		}
 	}
 			
