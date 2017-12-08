@@ -752,8 +752,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 542773453}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 90}
-  m_LocalScale: {x: 0.24993518, y: 0.24993518, z: 0.24993518}
+  m_LocalPosition: {x: 0, y: 0, z: 120}
+  m_LocalScale: {x: 0.25, y: 0.24993518, z: 0.24993518}
   m_Children:
   - {fileID: 402663044}
   - {fileID: 1975752911}
@@ -786,6 +786,7 @@ MonoBehaviour:
   answer6: {fileID: 2079028115}
   myToggleGroup: {fileID: 996987705}
   nextButton: {fileID: 1028518738}
+  isLikert: 0
   csvWriter: {fileID: 6617644}
 --- !u!1 &727866256
 GameObject:
@@ -1262,7 +1263,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1028518736}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -150, z: 0}
+  m_LocalPosition: {x: 0, y: -120, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 728983559}
@@ -1271,7 +1272,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -150}
+  m_AnchoredPosition: {x: 0, y: -120}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1028518738
@@ -1398,6 +1399,7 @@ MonoBehaviour:
   m_InteractiveItem: {fileID: 1028518741}
   m_NextButton: {fileID: 1028518738}
   gazeTimeToTurnOn: 1.5
+  sliderHandle: {fileID: 0}
 --- !u!1 &1108632423
 GameObject:
   m_ObjectHideFlags: 0

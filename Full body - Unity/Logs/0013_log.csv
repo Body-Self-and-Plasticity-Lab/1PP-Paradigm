@@ -1,0 +1,19 @@
+subject ID,age,gender,handedness,condition,question ID,value
+0013,25,Male,Right handed,,0,2
+0013,25,Male,Right handed,,1,2
+0013,25,Male,Right handed,,2,2
+0013,25,Male,Right handed,,3,2
+0013,25,Male,Right handed,,4,2
+0013,25,Male,Right handed,,5,2
+0013,25,Male,Right handed,,0,0.9510884
+0013,25,Male,Right handed,,1,0.46725
+0013,25,Male,Right handed,,2,0.9583448
+0013,25,Male,Right handed,,3,0.4164285
+0013,25,Male,Right handed,,4,0.9689185
+0013,25,Male,Right handed,,5,0.2443919
+0013,25,Male,Right handed,,6,0.6257007
+0013,25,Male,Right handed,,7,0.4686317
+0013,25,Male,Right handed,,8,0.6997456
+0013,25,Male,Right handed,,9,0.3460622
+0013,25,Male,Right handed,,10,0.6499638
+0013,25,Male,Right handed,,11,0.5165324

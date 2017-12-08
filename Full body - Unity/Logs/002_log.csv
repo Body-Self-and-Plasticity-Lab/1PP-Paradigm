@@ -1,0 +1,16 @@
+subject ID,age,gender,handedness,condition,question ID,value
+002,002,Female,Left handed,,0,3
+002,002,Female,Left handed,,1,1
+002,002,Female,Left handed,,2,4
+002,002,Female,Left handed,,3,0
+002,002,Female,Left handed,,4,4
+002,002,Female,Left handed,,5,3
+002,002,Female,Left handed,,0,0.9195013
+002,002,Female,Left handed,,1,0.5066327
+002,002,Female,Left handed,,2,0.4928818
+002,002,Female,Left handed,,3,0.86429
+002,002,Female,Left handed,,4,0.5507953
+002,002,Female,Left handed,,5,0.4418955
+002,002,Female,Left handed,,6,0.7319256
+002,002,Female,Left handed,,7,0.5292397
+002,002,Female,Left handed,,8,0.5229811

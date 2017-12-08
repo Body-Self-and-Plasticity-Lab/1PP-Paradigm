@@ -11,9 +11,11 @@ public class csvReader : MonoBehaviour {
 	public static List<string> questionnaireInput  = new List<string>();
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
+		Debug.Log ("we are looking for the name of the file: " + file);
 		Load (file, questionnaireInput);
 	}
+		
 	
 	// Update is called once per frame
 	void Update () {
@@ -59,7 +61,7 @@ public class csvReader : MonoBehaviour {
 
 					// Done reading, close the reader and return true to broadcast success    
 					csvFileReader.Close();
-
+				Debug.Log("Read all that jass, like " + arrayToTransferTo[0]);
 					return true;
 				}
 			}
