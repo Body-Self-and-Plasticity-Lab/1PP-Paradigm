@@ -1,8 +1,0 @@
-subject ID,age,gender,handedness,condition,question ID,value
-123fr,123fr,Female,Left handed,,0,3
-123fr,123fr,Female,Left handed,,1,2
-123fr,123fr,Female,Left handed,,2,4
-123fr,123fr,Female,Left handed,,3,5
-123fr,123fr,Female,Left handed,,4,1
-123fr,123fr,Female,Left handed,,5,1
-123fr,123fr,Female,Left handed,,0,0.8924531
