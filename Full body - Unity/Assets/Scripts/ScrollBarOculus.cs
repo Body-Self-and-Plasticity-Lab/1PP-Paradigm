@@ -6,13 +6,9 @@ using VRStandardAssets.Utils;
 
 public class ScrollBarOculus : MonoBehaviour {
 
-
-	[SerializeField] private SelectionRadial m_SelectionRadial;
-
 	public Scrollbar vScale;
 	public VRInteractiveItem vScaleInteractible;
-
-	public GameObject sliderHandle;
+	//public questionManager questionManager;
 
 	public Button nextButton;
 
@@ -23,24 +19,18 @@ public class ScrollBarOculus : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		sliderHandle.SetActive(false);
+		
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		if (vScaleInteractible.IsOver == true) {
-			m_SelectionRadial.Show ();
-
-			if (lastScrollerStatus == false) 
+		if (vScaleInteractible.IsOver == true) 
+		{
+			if (lastScrollerStatus == false)
 				momentOnView = Time.realtimeSinceStartup;
-
 			OnScrolling ();
 		} 
-
-
-		if (vScaleInteractible.IsOver == false && lastScrollerStatus == true) 
-			m_SelectionRadial.Hide ();
 			
 			
 
@@ -51,15 +41,17 @@ public class ScrollBarOculus : MonoBehaviour {
 
 		float elapsedTime = Time.realtimeSinceStartup - momentOnView;
 		float currentPosition = this.gameObject.transform.position.x;
+		Debug.Log (elapsedTime);
 
-		float mappedPosition =	(this.gameObject.transform.position.x/(250f*0.25f))+0.5f; //where 250 is the size in X of the scrollbar, 0.25 the scaling of the canvas and 0.5 to go between 0 and 1 instead of -0.5 to 0.5
+		float mappedPosition =	(this.gameObject.transform.position.x/150)+0.5f;
+
 
 		if (elapsedTime >= timeToLookAt) 
 		{
-			sliderHandle.SetActive(true);
+			Debug.Log ("It's scrolling on position " + mappedPosition);
 			vScale.value = mappedPosition;
-			momentOnView = Time.realtimeSinceStartup; //resets to actual time so that the elapsed time goes back to 0
-			csvWrite.answerValue = vScale.value.ToString();
+			momentOnView = Time.realtimeSinceStartup;
+			//questionManager.OnNextButton ();
 			nextButton.interactable = true;
 		}
 	}

@@ -26,8 +26,6 @@ namespace VRStandardAssets.Menu
 		private float timeAtGaze;
         private bool m_GazeOver;                                            // Whether the user is looking at the VRInteractiveItem currently.
 
-		public GameObject sliderHandle;
-
 
 
 		void Update (){
@@ -41,10 +39,6 @@ namespace VRStandardAssets.Menu
 			if (elapsedSinceGazed >= gazeTimeToTurnOn) {
 				m_NextButton.onClick.Invoke ();
 				m_NextButton.interactable = false;
-
-				if (sliderHandle != null) //set only in the slider scene
-					sliderHandle.SetActive(false);
-				
 				StartCoroutine (ActivateButton());
 				elapsedSinceGazed = 0;
 			}

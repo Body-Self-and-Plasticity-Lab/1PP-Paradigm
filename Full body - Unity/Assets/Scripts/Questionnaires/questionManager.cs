@@ -14,8 +14,6 @@ public class questionManager : MonoBehaviour {
 	public ToggleGroup myToggleGroup;
 	public Button nextButton;
 
-	public bool isLikert;
-
 	public csvWrite csvWriter;
 
 	List<Toggle> everyToggle = new List<Toggle>();
@@ -26,16 +24,11 @@ public class questionManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		currentItem = 0;
-		Debug.Log ("It's starting again!!");
 
 		questionList = csvReader.questionnaireInput;
-
-		if (isLikert)
-			FillList();
-
-
+		FillList();
 		questionUI.text = questionList[currentItem];
+
 	}
 
 		
@@ -60,8 +53,7 @@ public class questionManager : MonoBehaviour {
 				myToggleGroup.SetAllTogglesOff ();
 			}
 		}
-			
-		Debug.Log ("The current intem in the questionnaire is: " + currentItem);
+				
 			csvWrite.questionID = currentItem.ToString ();
 			csvWriter.onNextButtonPressed ();
 
@@ -71,11 +63,11 @@ public class questionManager : MonoBehaviour {
 				questionUI.text = questionList [currentItem];
 			
 
-		else if (currentItem == questionList.Count) {
-				currentItem = 0;
-				questionList.Clear();
+		else if (currentItem >= questionList.Count) {
 				SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 		}
 	}
+			
+
 
 }

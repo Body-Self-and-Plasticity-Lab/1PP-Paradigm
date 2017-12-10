@@ -11,12 +11,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Stimulation Kinect with outline.unity
     guid: 6479823151665424b954bbce0159c1a4
+  - enabled: 0
+    path: Assets/Scenes/Stimulation Kinect.unity
+    guid: 38b97fb7d9674a44c886a40ef76dbc9d
+  - enabled: 0
+    path: Assets/Scenes/Stimulation.unity
+    guid: ebc919aef86e74d4a9c91e083ef78633
   - enabled: 1
     path: Assets/Scenes/Likert.unity
     guid: 287ed5efc58784763ae73410f1ad0f10
-  - enabled: 1
-    path: Assets/Scenes/VAS.unity
-    guid: 75cbc88275231d64c9769294cf74d334
   - enabled: 1
     path: Assets/Scenes/Thank you.unity
     guid: 346803fe212fc44c4b7d3340317378ec

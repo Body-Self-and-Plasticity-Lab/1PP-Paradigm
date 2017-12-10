@@ -225,8 +225,8 @@ MonoBehaviour:
   sourceCamera: {fileID: 101965513}
   outlineCamera: {fileID: 1093373248}
   outlineShaderMaterial: {fileID: 0}
-  renderTexture: {fileID: 1127270695}
-  extraRenderTexture: {fileID: 1819380193}
+  renderTexture: {fileID: 2065146202}
+  extraRenderTexture: {fileID: 107934396}
 --- !u!114 &101965516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,6 +239,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   embodiedManipulation: 0
+--- !u!84 &107934396
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_Width: 604
+  m_Height: 445
+  m_AntiAliasing: 1
+  m_DepthFormat: 1
+  m_ColorFormat: 0
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1001 &207667719
 Prefab:
   m_ObjectHideFlags: 0
@@ -442,7 +469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1e47043778514e028e6a33db137e1a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  setArduinoFromEditor: 0
+  setArduinoFromEditor: 1
   port: COM3
   baudrate: 115200
   delayTime: 0.5
@@ -816,7 +843,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 0
   m_RenderingPath: 1
-  m_TargetTexture: {fileID: 1127270695}
+  m_TargetTexture: {fileID: 2065146202}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 0
@@ -838,33 +865,6 @@ Transform:
   m_Father: {fileID: 101965510}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!84 &1127270695
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_Width: 883
-  m_Height: 938
-  m_AntiAliasing: 1
-  m_DepthFormat: 1
-  m_ColorFormat: 0
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 0
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1 &1474496309 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100012, guid: 32391037566617d43bf95ef2816a76c5, type: 3}
@@ -1154,33 +1154,6 @@ SkinnedMeshRenderer:
   m_PrefabParentObject: {fileID: 13700000, guid: 32391037566617d43bf95ef2816a76c5,
     type: 3}
   m_PrefabInternal: {fileID: 207667719}
---- !u!84 &1819380193
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_Width: 883
-  m_Height: 938
-  m_AntiAliasing: 1
-  m_DepthFormat: 1
-  m_ColorFormat: 0
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1 &1820124534 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100090, guid: 0c32b5e11351c5f4fa3e34f275477ad6, type: 3}
@@ -1219,6 +1192,33 @@ MonoBehaviour:
   eraseRenderer: 0
   originalLayer: 0
   originalMaterials: []
+--- !u!84 &2065146202
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_Width: 604
+  m_Height: 445
+  m_AntiAliasing: 1
+  m_DepthFormat: 1
+  m_ColorFormat: 0
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 0
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1 &2073108963 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100076, guid: 32391037566617d43bf95ef2816a76c5, type: 3}
