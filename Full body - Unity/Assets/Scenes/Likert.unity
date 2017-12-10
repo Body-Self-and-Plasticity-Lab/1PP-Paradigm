@@ -786,7 +786,7 @@ MonoBehaviour:
   answer6: {fileID: 2079028115}
   myToggleGroup: {fileID: 996987705}
   nextButton: {fileID: 1028518738}
-  isLikert: 0
+  isLikert: 1
   csvWriter: {fileID: 6617644}
 --- !u!1 &727866256
 GameObject:

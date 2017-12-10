@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class csvWrite : MonoBehaviour {
 
@@ -21,7 +22,7 @@ public class csvWrite : MonoBehaviour {
 
 	public void onNextButtonPressed(){
 		
-		WriteToFile (subjectID, age, gender, handedness, null, questionID, answerValue);
+		WriteToFile (subjectID, age, gender, handedness, SceneManager.GetActiveScene().name, questionID, answerValue);
 
 	}
 

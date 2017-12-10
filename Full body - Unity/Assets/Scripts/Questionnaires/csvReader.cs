@@ -13,7 +13,7 @@ public class csvReader : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake () {
-		Debug.Log ("we are looking for the name of the file: " + file);
+		//Debug.Log ("we are looking for the name of the file: " + file);
 		Load (file, questionnaireInput);
 	}
 		
@@ -62,7 +62,7 @@ public class csvReader : MonoBehaviour {
 
 					// Done reading, close the reader and return true to broadcast success    
 					csvFileReader.Close();
-				Debug.Log("Read all that jass, like " + arrayToTransferTo[0]);
+				//Debug.Log("Read all that jass, like " + arrayToTransferTo[0]);
 					return true;
 				}
 			}

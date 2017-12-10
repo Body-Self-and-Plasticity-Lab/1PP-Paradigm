@@ -27,13 +27,13 @@ public class questionManager : MonoBehaviour {
 	void Start () {
 
 		currentItem = 0;
-		Debug.Log ("It's starting again!!");
+		//Debug.Log ("It's starting!!");
 
 		questionList = csvReader.questionnaireInput;
+		//Debug.Log ("The size of the list is " + questionList.Count);
 
 		if (isLikert)
 			FillList();
-
 
 		questionUI.text = questionList[currentItem];
 	}
@@ -41,7 +41,6 @@ public class questionManager : MonoBehaviour {
 		
 	//While not very beautiful I did not find another way to order the array
 	private void FillList(){
-
 		everyToggle.Add(answer0);
 		everyToggle.Add(answer1);
 		everyToggle.Add(answer2);
@@ -54,18 +53,22 @@ public class questionManager : MonoBehaviour {
 		
 	public void OnNextButton() {
 
-		for (int i = 0; i < everyToggle.Count; i++) {
-			if (everyToggle [i].isOn) {
-				csvWrite.answerValue = i.ToString ();
-				myToggleGroup.SetAllTogglesOff ();
+		if (isLikert) {
+			for (int i = 0; i < everyToggle.Count; i++) {
+				if (everyToggle [i].isOn) {
+					csvWrite.answerValue = i.ToString ();
+					myToggleGroup.SetAllTogglesOff ();
+				}
 			}
 		}
 			
-		Debug.Log ("The current intem in the questionnaire is: " + currentItem);
+
+
 			csvWrite.questionID = currentItem.ToString ();
 			csvWriter.onNextButtonPressed ();
 
 			currentItem ++;
+			//Debug.Log ("The current intem in the questionnaire is: " + currentItem + " out of " + questionList.Count);
 
 			if (currentItem < questionList.Count) 
 				questionUI.text = questionList [currentItem];
@@ -75,7 +78,6 @@ public class questionManager : MonoBehaviour {
 				currentItem = 0;
 				questionList.Clear();
 				SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-		}
+			}
 	}
-
 }

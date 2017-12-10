@@ -58,16 +58,21 @@ public class MainSceneConfigurations : MonoBehaviour {
 				myKinectManager.enabled = true;
 			}
 		}
+	
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
-		if (Time.timeSinceLevelLoad >= duration) 
-			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+		if (Time.timeSinceLevelLoad >= duration) {
+			SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
+			Destroy (this);//A bug caused by DontDestroyOnLoad somewhere in this scene was causing the scene manager to activate in every scene.
+		}
+
 
 		//Calibrate Oculus
 		if (Input.GetKeyDown("c"))
 			InputTracking.Recenter ();
 	}
+		
 }
