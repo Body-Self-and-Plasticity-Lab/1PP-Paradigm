@@ -10,6 +10,7 @@ public class csvReader : MonoBehaviour {
 	public string file;
 	public static List<string> questionnaireInput  = new List<string>();
 
+
 	// Use this for initialization
 	void Awake () {
 		Debug.Log ("we are looking for the name of the file: " + file);

@@ -1790,7 +1790,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 468498950}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 417.5, y: 223, z: 0}
+  m_LocalPosition: {x: 441.5, y: 469, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2098080036}
@@ -1897,6 +1897,7 @@ GameObject:
   - component: {fileID: 612352267}
   - component: {fileID: 612352269}
   - component: {fileID: 612352268}
+  - component: {fileID: 612352271}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -1947,6 +1948,7 @@ MonoBehaviour:
   arduinoOn: {fileID: 1788082008}
   kinectOn: {fileID: 1769346289}
   csvWriter: {fileID: 612352268}
+  csvFastWriter: {fileID: 612352271}
 --- !u!4 &612352270
 Transform:
   m_ObjectHideFlags: 0
@@ -1960,6 +1962,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &612352271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 612352266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50141536045ed364c8e02d2776f826ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  logRate: 0.1
+  viewForHeadTracking: {fileID: 402411318}
 --- !u!1 &640001992
 GameObject:
   m_ObjectHideFlags: 0

@@ -113,8 +113,6 @@ public class ArduinoControl : MonoBehaviour {
 		yield return null;
 	}
 
-
-
 	public void Close() {
 		stream.Close();
 	}

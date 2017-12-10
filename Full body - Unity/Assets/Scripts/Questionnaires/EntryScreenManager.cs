@@ -25,6 +25,7 @@ public class EntryScreenManager : MonoBehaviour {
 	public static int conditionDuration, portIndex;
 
 	public csvWrite csvWriter;
+	public csvWriteFastRate csvFastWriter;
 
 	// Use this for initialization
 	void Start () {
@@ -95,7 +96,10 @@ public class EntryScreenManager : MonoBehaviour {
 		csvWrite.gender = genderField.text;
 		csvWrite.handedness = handednessField.text;
 
+		csvWriteFastRate.subjectID = participantName;
+
 		csvWriter.GetComponent<csvWrite>().onParticipantDataEntered();
+		csvFastWriter.GetComponent<csvWriteFastRate> ().OnParticipantDataEntered();
 
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 	
