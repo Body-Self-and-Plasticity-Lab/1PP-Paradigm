@@ -1,7 +1,0 @@
-subject ID,age,gender,handedness,condition,question ID,value
-012,25,Female,Left handed,Likert,0,3
-012,25,Female,Left handed,Likert,1,1
-012,25,Female,Left handed,Likert,2,5
-012,25,Female,Left handed,VAS,0,0.4511783
-012,25,Female,Left handed,VAS,1,0.9120153
-012,25,Female,Left handed,VAS,2,0.3635085

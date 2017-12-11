@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.XR;
 
-public class MainSceneConfigurations : MonoBehaviour {
+public class StimulationSceneConfigurations : MonoBehaviour {
 
 	public GameObject female;
 	public GameObject male;
@@ -14,11 +14,15 @@ public class MainSceneConfigurations : MonoBehaviour {
 	public float setDuration;
 	public bool setKinectFromCurrentScene;
 
+	public static string currentCondition;
+
 	private float duration;
 	//public float conditionDuration;
 	// Use this for initialization
 
 	void Start () {
+
+		currentCondition = SceneManager.GetActiveScene ().name;
 
 		myKinectManager = GetComponent<KinectManager> ();
 
@@ -66,7 +70,7 @@ public class MainSceneConfigurations : MonoBehaviour {
 		
 		if (Time.timeSinceLevelLoad >= duration) {
 			SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
-			Destroy (this);//A bug caused by DontDestroyOnLoad somewhere in this scene was causing the scene manager to activate in every scene.
+			//Destroy (this);//Use this if a DontDestroyOnLoad is somewhere in this scene.
 		}
 
 

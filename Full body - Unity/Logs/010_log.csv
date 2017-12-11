@@ -1,7 +1,0 @@
-subject ID,age,gender,handedness,condition,question ID,value
-010,45,Female,Left handed,,0,2
-010,45,Female,Left handed,,1,4
-010,45,Female,Left handed,,2,3
-010,45,Female,Left handed,,0,0.7616875
-010,45,Female,Left handed,,1,0.4012559
-010,45,Female,Left handed,,2,0.8677264

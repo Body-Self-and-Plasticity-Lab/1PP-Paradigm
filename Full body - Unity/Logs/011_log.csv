@@ -1,7 +1,0 @@
-subject ID,age,gender,handedness,condition,question ID,value
-011,24,Female,Left handed,UnityEngine.SceneManagement.Scene,0,3
-011,24,Female,Left handed,UnityEngine.SceneManagement.Scene,1,2
-011,24,Female,Left handed,UnityEngine.SceneManagement.Scene,2,4
-011,24,Female,Left handed,UnityEngine.SceneManagement.Scene,0,0.3323846
-011,24,Female,Left handed,UnityEngine.SceneManagement.Scene,1,0.8295604
-011,24,Female,Left handed,UnityEngine.SceneManagement.Scene,2,0.4341819

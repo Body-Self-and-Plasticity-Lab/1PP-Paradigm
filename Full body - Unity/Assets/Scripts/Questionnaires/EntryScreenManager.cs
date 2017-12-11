@@ -15,14 +15,13 @@ public class EntryScreenManager : MonoBehaviour {
 	public Dropdown serialDropdown;
 
 	public Button nextButton;
-	public Toggle arduinoOn;
-
-	public Toggle kinectOn;
+	public Toggle arduinoOn,  kinectOn;
 
 	//private string participantName, age;
 	public static string participantName, age;
 
 	public static bool isFemale, arduinoTrackingIsOn, kinectStatus;
+
 	public static int conditionDuration, portIndex;
 
 	public csvWrite csvWriter;

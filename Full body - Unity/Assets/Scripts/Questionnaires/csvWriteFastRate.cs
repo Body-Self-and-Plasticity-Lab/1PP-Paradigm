@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.XR;
-using UnityEngine.SceneManagement;
 
 public class csvWriteFastRate : MonoBehaviour {
 
 	public float logRate;
 	public Camera viewForHeadTracking;
-	//public static string subjectID;
+	private string condition;
 
 	private float lastRotationMagnitude;
 	private float currentRotationAcceleration;
@@ -21,13 +20,11 @@ public class csvWriteFastRate : MonoBehaviour {
 		
 		WriteToFile ("subject ID", "condition", "rotationAngle_x", "rotationAngle_y", "rotationAngle_z", "acceleration", "heartRate");	
 		InvokeRepeating ("FastLogger", 0.0f, logRate);
-
+		condition = StimulationSceneConfigurations.currentCondition;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
-
 
 		if (viewForHeadTracking != null) {
 			cameraRotation = viewForHeadTracking.transform.rotation.eulerAngles;
@@ -44,9 +41,9 @@ public class csvWriteFastRate : MonoBehaviour {
 	}
 
 	void FastLogger (){
-		//Debug.Log ("at time: " + Time.realtimeSinceStartup + " the head acceleration is " + currentRotationAcceleration);
+		Debug.Log ("at time: " + Time.realtimeSinceStartup + " the head acceleration is " + currentRotationAcceleration + " the head orientation in x is " + cameraRotation.x.ToString());
 
-		WriteToFile (EntryScreenManager.participantName, SceneManager.GetActiveScene().name, cameraRotation.x.ToString(), cameraRotation.y.ToString(), 
+		WriteToFile (EntryScreenManager.participantName, condition, cameraRotation.x.ToString(), cameraRotation.y.ToString(), 
 			cameraRotation.z.ToString(), currentRotationAcceleration.ToString(), OutlineCardio.heartRate.ToString());
 
 	}
@@ -56,7 +53,6 @@ public class csvWriteFastRate : MonoBehaviour {
 	}
 
 	public void OnParticipantDataEntered(){
-
 
 	}
 

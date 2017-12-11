@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class csvWrite : MonoBehaviour {
 
 	public static string subjectID, age, gender, handedness, questionID, answerValue;
 
 	private string instructionsMessage;
+	private string condition;
 
 	// Use this for initialization
 	void Start () {
-
+		condition = StimulationSceneConfigurations.currentCondition;
 	}
 	
 	// Update is called once per frame
@@ -22,7 +22,7 @@ public class csvWrite : MonoBehaviour {
 
 	public void onNextButtonPressed(){
 		
-		WriteToFile (subjectID, age, gender, handedness, SceneManager.GetActiveScene().name, questionID, answerValue);
+		WriteToFile (subjectID, age, gender, handedness, condition, questionID, answerValue);
 
 	}
 
