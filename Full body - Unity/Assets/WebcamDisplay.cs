@@ -25,8 +25,8 @@ public class WebcamDisplay : MonoBehaviour {
 		webcamTexture = new WebCamTexture (deviceName);
 
 		webcamTexture.requestedFPS = 60;
-		webcamTexture.requestedWidth = 16; //12 maybe?
-		webcamTexture.requestedHeight = 9;
+		//webcamTexture.requestedWidth = 12; //12 maybe?
+		//webcamTexture.requestedHeight = 12;
 
 		webcamTexture.Play();
 

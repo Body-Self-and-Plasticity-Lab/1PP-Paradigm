@@ -17,16 +17,12 @@ public class csvWriteFastRate : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
 
+		WriteToFile ("subject ID", "condition", "rotationAngle_x", "rotationAngle_y", "rotationAngle_z", "acceleration", "time stamp");	
 		InvokeRepeating ("FastLogger", 0.0f, logRate);
 		condition = GetConditionName.currentCondition;
 	}
-
-	public void onParticipantDataEntered(){
-
-		WriteToFile ("subject ID", "condition", "rotationAngle_x", "rotationAngle_y", "rotationAngle_z", "acceleration", "time stamp");	
-	}
+		
 	
 	// Update is called once per frame
 	void Update () {

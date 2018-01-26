@@ -203,6 +203,7 @@
      <Compile Include="Assets\Scripts\SceneDuration.cs" />
      <Compile Include="Assets\Scripts\ScrollBarOculus.cs" />
      <Compile Include="Assets\Scripts\StimulationSceneConfigurations.cs" />
+     <Compile Include="Assets\Scripts\StopTracking.cs" />
      <Compile Include="Assets\Scripts\VisuocardiacMapping.cs" />
      <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
      <Compile Include="Assets\VRSampleScenes\Scripts\Common\SessionData.cs" />
