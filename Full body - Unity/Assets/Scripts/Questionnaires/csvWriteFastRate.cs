@@ -18,9 +18,14 @@ public class csvWriteFastRate : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		
-		WriteToFile ("subject ID", "condition", "rotationAngle_x", "rotationAngle_y", "rotationAngle_z", "acceleration", "heartRate");	
+
 		InvokeRepeating ("FastLogger", 0.0f, logRate);
-		condition = StimulationSceneConfigurations.currentCondition;
+		condition = GetConditionName.currentCondition;
+	}
+
+	public void onParticipantDataEntered(){
+
+		WriteToFile ("subject ID", "condition", "rotationAngle_x", "rotationAngle_y", "rotationAngle_z", "acceleration", "time stamp");	
 	}
 	
 	// Update is called once per frame
@@ -44,7 +49,7 @@ public class csvWriteFastRate : MonoBehaviour {
 		Debug.Log ("at time: " + Time.realtimeSinceStartup + " the head acceleration is " + currentRotationAcceleration + " the head orientation in x is " + cameraRotation.x.ToString());
 
 		WriteToFile (EntryScreenManager.participantName, condition, cameraRotation.x.ToString(), cameraRotation.y.ToString(), 
-			cameraRotation.z.ToString(), currentRotationAcceleration.ToString(), OutlineCardio.heartRate.ToString());
+			cameraRotation.z.ToString(), currentRotationAcceleration.ToString(), Time.timeSinceLevelLoad.ToString());
 
 	}
 

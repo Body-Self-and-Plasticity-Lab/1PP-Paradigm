@@ -12,7 +12,7 @@ public class csvWrite : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		condition = StimulationSceneConfigurations.currentCondition;
+		condition = GetConditionName.currentCondition;
 	}
 	
 	// Update is called once per frame

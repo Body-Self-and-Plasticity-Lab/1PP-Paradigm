@@ -204,6 +204,8 @@ GameObject:
   - component: {fileID: 434781245}
   - component: {fileID: 434781244}
   - component: {fileID: 434781246}
+  - component: {fileID: 434781248}
+  - component: {fileID: 434781247}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -222,7 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04e18f14a06ce9e40afd58fcaf6ff454, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  setDuration: 60
+  setDuration: 5
 --- !u!4 &434781245
 Transform:
   m_ObjectHideFlags: 0
@@ -245,6 +247,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 057db25763c616b41a5c895b1a238865, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &434781247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 434781243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50141536045ed364c8e02d2776f826ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  logRate: 0.05
+  viewForHeadTracking: {fileID: 301810241}
+--- !u!114 &434781248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 434781243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 643150f3b024e484a84556193bd9326d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1257163043

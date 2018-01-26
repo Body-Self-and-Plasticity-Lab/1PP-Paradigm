@@ -187,6 +187,8 @@
      <Compile Include="Assets\Packages\OutlineEffect\Outline.cs" />
      <Compile Include="Assets\Packages\OutlineEffect\OutlineEffect.cs" />
      <Compile Include="Assets\Scripts\ArduinoControl.cs" />
+     <Compile Include="Assets\Scripts\CloseProgram.cs" />
+     <Compile Include="Assets\Scripts\GetConditionName.cs" />
      <Compile Include="Assets\Scripts\GoToNextScene.cs" />
      <Compile Include="Assets\Scripts\HeadsetControl.cs" />
      <Compile Include="Assets\Scripts\OutlineCardio.cs" />
