@@ -26,7 +26,7 @@ public class WebcamDisplay : MonoBehaviour {
 
 		webcamTexture.requestedFPS = 60;
 		webcamTexture.requestedWidth = 16; //12 maybe?
-		webcamTexture.requestedHeight = 16;
+		webcamTexture.requestedHeight = 9;
 
 		webcamTexture.Play();
 
@@ -73,4 +73,9 @@ public class WebcamDisplay : MonoBehaviour {
 		myBuffer.RemoveAt (0);
 
 	}
+
+	void OnDisable () {
+		webcamTexture.Stop();
+	}
+
 }
