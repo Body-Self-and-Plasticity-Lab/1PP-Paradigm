@@ -9,20 +9,50 @@ EditorBuildSettings:
     path: Assets/Scenes/Intro screen.unity
     guid: 2301358e402394940bb50599c813bad2
   - enabled: 1
+    path: Assets/Scenes/ExperimentInstructions.unity
+    guid: acfcac9f779f08a4e934e50953ff5c15
+  - enabled: 1
+    path: Assets/Scenes/ExperimentInstructions2.unity
+    guid: c2350e12461fc974a98c493e4e23eb78
+  - enabled: 1
+    path: Assets/Scenes/VAStest.unity
+    guid: 75cbc88275231d64c9769294cf74d334
+  - enabled: 1
     path: Assets/Scenes/VideoCenteredNoDelay.unity
     guid: cd89e412109a14a21b1b6896e5d597ef
   - enabled: 1
-    path: Assets/Scenes/VAS.unity
-    guid: 75cbc88275231d64c9769294cf74d334
+    path: Assets/Scenes/VASInstructions1.unity
+    guid: 640927c7beb759348afa04effc21c908
+  - enabled: 1
+    path: Assets/Scenes/VAS1.unity
+    guid: 41f9a52ea784b604898866ec2a680b9a
   - enabled: 1
     path: Assets/Scenes/VideoTiltedNoDelay.unity
     guid: 5f7a768a2c204f140bd37ff5b50f010c
   - enabled: 1
+    path: Assets/Scenes/VASInstructions2.unity
+    guid: d049ea2ee75d87640916604cab7421d8
+  - enabled: 1
+    path: Assets/Scenes/VAS2.unity
+    guid: fe6ea1d2726f1224aa910f5eb9b46513
+  - enabled: 1
     path: Assets/Scenes/VideoCenteredDelay.unity
     guid: df7d8520e8fe36a45a0bead269dd4579
   - enabled: 1
+    path: Assets/Scenes/VASInstructions3.unity
+    guid: 88aaf7632b335344a991254cd808e965
+  - enabled: 1
+    path: Assets/Scenes/VAS3.unity
+    guid: a0ff69dcd62416a41961cac9b27da47c
+  - enabled: 1
     path: Assets/Scenes/VideoTiltedDelay.unity
     guid: b86c4e635a13f8d45857aeec92c18d2a
+  - enabled: 1
+    path: Assets/Scenes/VASInstructions4.unity
+    guid: e084cd22172e9f4488248bded084a2c8
+  - enabled: 1
+    path: Assets/Scenes/VAS4.unity
+    guid: 3157eb2355131af468c8f82460e76aaf
   - enabled: 1
     path: Assets/Scenes/Thank you.unity
     guid: 346803fe212fc44c4b7d3340317378ec

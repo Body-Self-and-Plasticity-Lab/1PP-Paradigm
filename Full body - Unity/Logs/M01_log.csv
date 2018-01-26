@@ -1,0 +1,6 @@
+subject ID,age,gender,handedness,condition,question ID,value
+M01,21,Female,Left handed,,0,0.5955094
+M01,21,Female,Left handed,,1,0.6552941
+M01,21,Female,Left handed,,2,0.3903073
+M01,21,Female,Left handed,,3,0.8802898
+M01,21,Female,Left handed,,4,0.3506003
