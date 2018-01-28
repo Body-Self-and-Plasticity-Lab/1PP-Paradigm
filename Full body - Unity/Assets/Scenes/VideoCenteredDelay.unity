@@ -363,10 +363,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   setDelay: 1
-  delayTimeSeconds: 2
-  webcamDeviceID: 0
+  delayTimeSeconds: 1
+  webcamDeviceID: 1
   containerTilt: {fileID: 1786430037}
   tiltValue: 0
+  renderFrame: {fileID: 0}
 --- !u!1 &1257163043
 GameObject:
   m_ObjectHideFlags: 0

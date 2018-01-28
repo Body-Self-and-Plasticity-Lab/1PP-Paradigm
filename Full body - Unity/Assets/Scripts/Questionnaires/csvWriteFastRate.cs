@@ -42,7 +42,7 @@ public class csvWriteFastRate : MonoBehaviour {
 	}
 
 	void FastLogger (){
-		Debug.Log ("at time: " + Time.realtimeSinceStartup + " the head acceleration is " + currentRotationAcceleration + " the head orientation in x is " + cameraRotation.x.ToString());
+		//Debug.Log ("at time: " + Time.realtimeSinceStartup + " the head acceleration is " + currentRotationAcceleration + " the head orientation in x is " + cameraRotation.x.ToString());
 
 		WriteToFile (EntryScreenManager.participantName, condition, cameraRotation.x.ToString(), cameraRotation.y.ToString(), 
 			cameraRotation.z.ToString(), currentRotationAcceleration.ToString(), Time.timeSinceLevelLoad.ToString());
