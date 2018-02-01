@@ -1200,9 +1200,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Herzlich willkommen. Im Folgenden werden Sie eine Projektion sehen. Wir
-    werden Sie w\xE4hrenddessen mit einem Stab leicht am R\xFCcken ber\xFChren. Bitte
-    konzentrieren Sie sich auf den K\xF6rper, den Sie vor sich sehen werden. "
+  m_Text: 'Herzlich willkommen. Im Folgenden werden Sie eine Projektion sehen. Wir
+    werden Sie waehrenddessen mit einem Stab leicht am Ruecken beruehren. Bitte konzentrieren
+    Sie sich auf den Koerper, den Sie vor sich sehen werden. '
 --- !u!222 &756127976
 CanvasRenderer:
   m_ObjectHideFlags: 0

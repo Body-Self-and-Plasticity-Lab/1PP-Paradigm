@@ -1201,7 +1201,7 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: " Auf einer Skala von 0 (gar nicht) bis 100 (sehr stark)\r\n\r\nWie stark
-    hatten Sie das Gef\xFChl, dass:"
+    hatten Sie das Gefuehl, dass:"
 --- !u!222 &756127976
 CanvasRenderer:
   m_ObjectHideFlags: 0

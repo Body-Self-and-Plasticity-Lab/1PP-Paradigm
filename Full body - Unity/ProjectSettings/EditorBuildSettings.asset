@@ -18,8 +18,11 @@ EditorBuildSettings:
     path: Assets/Scenes/VAStest.unity
     guid: 75cbc88275231d64c9769294cf74d334
   - enabled: 1
-    path: Assets/Scenes/VideoCenteredNoDelay.unity
-    guid: cd89e412109a14a21b1b6896e5d597ef
+    path: Assets/Scenes/NextTrial1.unity
+    guid: 7bf97b6f0f0bdac4abf70d10e6d0dba2
+  - enabled: 1
+    path: Assets/Scenes/NTAS.unity
+    guid: 2ef29d71b27773441a3682a031965a4e
   - enabled: 1
     path: Assets/Scenes/VASInstructions1.unity
     guid: 640927c7beb759348afa04effc21c908
@@ -27,8 +30,11 @@ EditorBuildSettings:
     path: Assets/Scenes/VAS1.unity
     guid: 41f9a52ea784b604898866ec2a680b9a
   - enabled: 1
-    path: Assets/Scenes/VideoTiltedNoDelay.unity
-    guid: 5f7a768a2c204f140bd37ff5b50f010c
+    path: Assets/Scenes/NextTrial2.unity
+    guid: bf0f5a73922ed3940b3662e1ebbd49dc
+  - enabled: 1
+    path: Assets/Scenes/NTS.unity
+    guid: 6a6299f9834772d43a07b8395012c3ed
   - enabled: 1
     path: Assets/Scenes/VASInstructions2.unity
     guid: d049ea2ee75d87640916604cab7421d8
@@ -36,8 +42,11 @@ EditorBuildSettings:
     path: Assets/Scenes/VAS2.unity
     guid: fe6ea1d2726f1224aa910f5eb9b46513
   - enabled: 1
-    path: Assets/Scenes/VideoCenteredDelay.unity
-    guid: df7d8520e8fe36a45a0bead269dd4579
+    path: Assets/Scenes/NextTrial3.unity
+    guid: 253f588a2aedde441af59ea01419a269
+  - enabled: 1
+    path: Assets/Scenes/TAS.unity
+    guid: b86c4e635a13f8d45857aeec92c18d2a
   - enabled: 1
     path: Assets/Scenes/VASInstructions3.unity
     guid: 88aaf7632b335344a991254cd808e965
@@ -45,8 +54,11 @@ EditorBuildSettings:
     path: Assets/Scenes/VAS3.unity
     guid: a0ff69dcd62416a41961cac9b27da47c
   - enabled: 1
-    path: Assets/Scenes/VideoTiltedDelay.unity
-    guid: b86c4e635a13f8d45857aeec92c18d2a
+    path: Assets/Scenes/NextTrial4.unity
+    guid: 57fd205ae594e4540a17a5f907176927
+  - enabled: 1
+    path: Assets/Scenes/TS.unity
+    guid: 5f7a768a2c204f140bd37ff5b50f010c
   - enabled: 1
     path: Assets/Scenes/VASInstructions4.unity
     guid: e084cd22172e9f4488248bded084a2c8

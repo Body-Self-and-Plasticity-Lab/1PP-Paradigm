@@ -17,8 +17,8 @@ public class csvWriteFastRate : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
-		WriteToFile ("subject ID", "condition", "rotationAngle_x", "rotationAngle_y", "rotationAngle_z", "acceleration", "time stamp");	
+		//For oculus x is pitch, y is yaw, and z is roll 
+		WriteToFile ("subject ID", "condition", "rotationAngle_pitch", "rotationAngle_yaw", "rotationAngle_roll", "acceleration", "time stamp");	
 		InvokeRepeating ("FastLogger", 0.0f, logRate);
 		condition = GetConditionName.currentCondition;
 	}
@@ -42,7 +42,7 @@ public class csvWriteFastRate : MonoBehaviour {
 	}
 
 	void FastLogger (){
-		Debug.Log ("at time: " + Time.realtimeSinceStartup + " the head acceleration is " + currentRotationAcceleration + " the head orientation in x is " + cameraRotation.x.ToString());
+		//Debug.Log ("the pitch is " + cameraRotation.x.ToString() + ", the yaw is " + cameraRotation.y.ToString() + ", the roll is " + cameraRotation.z.ToString());
 
 		WriteToFile (EntryScreenManager.participantName, condition, cameraRotation.x.ToString(), cameraRotation.y.ToString(), 
 			cameraRotation.z.ToString(), currentRotationAcceleration.ToString(), Time.timeSinceLevelLoad.ToString());

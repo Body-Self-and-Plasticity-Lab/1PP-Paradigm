@@ -80,14 +80,14 @@ public class EntryScreenManager : MonoBehaviour {
 	public void OnNextButton () {
 
 
-		if (genderField.text == "Female")
-			isFemale = true;
+		//if (genderField.text == "Female")
+		//	isFemale = true;
 		
-		else if (genderField.text != "Female")
-			isFemale = false;
+		//else if (genderField.text != "Female")
+		//	isFemale = false;
 
-		portIndex = serialDropdown.value; //(serialDropdown.value);
-		conditionDuration = int.Parse(enteredDuration.text);
+		//portIndex = serialDropdown.value; //(serialDropdown.value);
+		//conditionDuration = int.Parse(enteredDuration.text);
 
 		csvWrite.subjectID = participantName;
 		csvWrite.age = age;
@@ -98,7 +98,8 @@ public class EntryScreenManager : MonoBehaviour {
 
 		csvWriter.GetComponent<csvWrite>().onParticipantDataEntered();
 
-		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+		SceneManager.LoadScene("ExperimentInstructions");
+		//SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 	
 	}
 

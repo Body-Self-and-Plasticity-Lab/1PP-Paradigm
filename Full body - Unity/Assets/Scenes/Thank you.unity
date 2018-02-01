@@ -678,7 +678,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Sie d\xFCrfen die Brille nun abnehmen. "
+  m_Text: 'Sie duerfen die Brille nun abnehmen. '
 --- !u!222 &1810632648
 CanvasRenderer:
   m_ObjectHideFlags: 0

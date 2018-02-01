@@ -20,8 +20,10 @@ public class CenterView : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if(Input.GetKeyDown("c"))
-			UnityEngine.XR.InputTracking.Recenter();	
+		if (Input.GetKeyDown ("c")) {
+		//	transform.eulerAngles = new Vector3 (0f, 0f, 0f);
+			UnityEngine.XR.InputTracking.Recenter ();
+		}
 		
 	}
 }

@@ -21,9 +21,12 @@ public class SceneDuration : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (Time.timeSinceLevelLoad >= duration) {
+		/*if (Time.timeSinceLevelLoad >= duration) {
+			SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
+		}*/
+
+		if (Input.GetKeyDown ("space")) {
 			SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
 		}
-		
 	}
 }
