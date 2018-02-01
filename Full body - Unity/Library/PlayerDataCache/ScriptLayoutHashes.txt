@@ -1,26 +1,11 @@
 WindowsStandalone
 SceneListBegin?
 Assets/Scenes/Intro screen.unity
-Assets/Scenes/ExperimentInstructions.unity
-Assets/Scenes/ExperimentInstructions2.unity
-Assets/Scenes/VAStest.unity
 Assets/Scenes/NextTrial1.unity
-Assets/Scenes/NTAS.unity
+Assets/Scenes/NTS.unity
 Assets/Scenes/VASInstructions1.unity
 Assets/Scenes/VAS1.unity
-Assets/Scenes/NextTrial2.unity
-Assets/Scenes/NTS.unity
-Assets/Scenes/VASInstructions2.unity
-Assets/Scenes/VAS2.unity
-Assets/Scenes/NextTrial3.unity
-Assets/Scenes/TAS.unity
-Assets/Scenes/VASInstructions3.unity
-Assets/Scenes/VAS3.unity
-Assets/Scenes/NextTrial4.unity
-Assets/Scenes/TS.unity
-Assets/Scenes/VASInstructions4.unity
-Assets/Scenes/VAS4.unity
-Assets/Scenes/Thank you.unity
+Assets/Scenes/Between conditions.unity
 SceneListEnd?
 f8c15809c1ce226a3631887172fd5d49 Assembly-CSharp.dll:.LoadLevelWhenNoUser
 c8cd4b2982b669fda4777d7c018ef136 Assembly-CSharp.dll:.LoadLevelWhenUserDetected

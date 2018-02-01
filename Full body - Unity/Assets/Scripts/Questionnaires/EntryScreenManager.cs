@@ -98,8 +98,8 @@ public class EntryScreenManager : MonoBehaviour {
 
 		csvWriter.GetComponent<csvWrite>().onParticipantDataEntered();
 
-		SceneManager.LoadScene("ExperimentInstructions");
-		//SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+		//SceneManager.LoadScene("ExperimentInstructions");
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 	
 	}
 
